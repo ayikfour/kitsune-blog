@@ -1,0 +1,132 @@
+@tailwind base;
+@import url('https://rsms.me/inter/inter.css');
+html {
+   font-family: 'Inter', sans-serif;
+}
+@supports (font-variation-settings: normal) {
+   html {
+      font-family: 'Inter var', sans-serif;
+   }
+}
+
+@import './syntax-zeit.css';
+@import './article.css';
+
+h1 {
+   @apply text-5xl  .font-bold .tracking-normal .leading-tight .mb-8;
+}
+h2 {
+   @apply text-3xl  .font-bold .tracking-normal .leading-normal .mb-16;
+}
+h3 {
+   @apply .text-xl  .font-medium .tracking-normal .leading-normal .mb-1;
+}
+
+p,
+li {
+   @apply .text-lg  .font-normal .tracking-normal .leading-loose;
+}
+
+a:hover {
+   @apply .bg-highlight-cyan;
+}
+
+a {
+   @apply underline;
+}
+
+:root {
+   --header-bg-dark: rgba(19, 20, 21, 0.8);
+   --header-bg-light: rgba(247, 247, 247, 0.8);
+   --selection-on-dark: hsla(0, 0%, 100%, 0.99);
+   --selection-on-light: hsla(0, 0%, 0%, 0.99);
+}
+
+@tailwind components;
+@tailwind utilities;
+
+/* Global style */
+button:focus {
+   @apply .bg-accent-2 .border-none .outline-none .text-black;
+}
+
+/* Dark mode style */
+body.dark-mode {
+   @apply .bg-accent-8;
+   color: theme('colors.white');
+   transition: background-color 0.3s ease;
+
+   & ::selection {
+      text-shadow: none;
+      color: theme('colors.black');
+      background-color: var(--selection-on-dark);
+   }
+
+   & h1,
+   h2,
+   p {
+      color: theme('colors.white');
+   }
+
+   & button:hover,
+   button:focus {
+      @apply .bg-accent-7;
+   }
+
+   & nav {
+      /* @apply .bg-accent-8; */
+      transition: background-color 0.3s ease;
+      background-color: var(--header-bg-dark);
+      backdrop-filter: saturate(180%) blur(20px);
+
+      & a {
+         @apply .text-ink-low .no-underline;
+      }
+      & a:hover,
+      a:focus {
+         @apply .text-white .bg-accent-7 .border-none .outline-none .rounded-md .no-underline;
+      }
+   }
+
+   & svg {
+      @apply .stroke-light;
+   }
+}
+
+/* Light mode style */
+body.light-mode {
+   @apply .bg-accent-1;
+   color: theme('colors.black');
+   transition: background-color 0.3s ease;
+
+   & ::selection {
+      text-shadow: none;
+      color: theme('colors.white');
+      background-color: var(--selection-on-light);
+   }
+
+   & svg {
+      @apply .stroke-dark;
+   }
+
+   & nav {
+      /* @apply .bg-accent-1; */
+      transition: background-color 0.3s ease;
+      background-color: var(--header-bg-light);
+      backdrop-filter: saturate(180%) blur(20px);
+
+      & a {
+         @apply .text-ink-medium .no-underline;
+      }
+
+      & a:focus,
+      a:hover {
+         @apply .text-black .border-none .outline-none .rounded-md .no-underline;
+      }
+   }
+}
+
+img {
+   max-width: 100%;
+   display: block;
+}
