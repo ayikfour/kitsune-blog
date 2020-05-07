@@ -8,6 +8,7 @@ import Image from '../../components/image';
 
 export default function Post({
    title,
+   description = null,
    cover = null,
    date,
    readingTime,
@@ -19,7 +20,7 @@ export default function Post({
 
    return (
       <Layout>
-         <Header title={title} og={cover} />
+         <Header title={title} og={cover} description={description} />
          <article className={getArticleClassName()}>
             <Image title={title} cover={cover} className='mb-16' />
             <h1 className='mb-4'>{title}</h1>

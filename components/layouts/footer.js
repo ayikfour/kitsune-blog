@@ -6,8 +6,10 @@ import Link from '../link';
 export default function Footer() {
    return (
       <footer className='w-full mt-32 border-t'>
-         <div className={`flex justify-between mx-auto py-4 ${containerStyle}`}>
-            <div>
+         <div
+            className={`flex justify-center md:justify-between mx-auto py-4 ${containerStyle}`}
+         >
+            <div className='hidden md:block'>
                <Link href='/' className=''>
                   キツネ –– 2020
                </Link>

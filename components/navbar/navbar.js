@@ -29,7 +29,6 @@ export default function Navbar({ page }) {
             <div className='flex flex-row items-center space-x-4 '>
                <Link href='/posts'>Overthought</Link>
                <Link href='/works'>Works</Link>
-               <Link href=''>About</Link>
             </div>
          </div>
       </nav>

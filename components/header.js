@@ -1,11 +1,18 @@
 import useDarkMode from 'use-dark-mode';
 import Head from 'next/head';
 
+const baseUrl = 'https://ayikfour.now.sh';
 export default function Header({
    title,
    og = null,
    description = 'Ayikfour personal overthought',
 }) {
+   const getOg = () => {
+      return og
+         ? `${baseUrl}${og}`
+         : 'https://ayikfour.now.sh/images/og/og-general.png';
+   };
+
    const darkMode = useDarkMode(true);
    return (
       <Head>
@@ -19,18 +26,8 @@ export default function Header({
          <meta name='twitter:description' content={description} />
 
          {/* Images */}
-         <meta
-            name='twitter:image'
-            content={
-               og ? og : 'https://ayikfour.now.sh/images/og/og-general.png'
-            }
-         />
-         <meta
-            property='og:image'
-            content={
-               og ? og : 'https://ayikfour.now.sh/images/og/og-general.png'
-            }
-         />
+         <meta name='twitter:image' content={getOg()} />
+         <meta property='og:image' content={getOg()} />
 
          {/* URL */}
          <meta name='og:url' content='https://ayikfour.now.sh' />
@@ -66,13 +63,4 @@ export default function Header({
          />
       </Head>
    );
-}
-
-{
-   /* <meta
-   property='og:image'
-   content={`https://og-image.now.sh/${encodeURI(
-      title
-   )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-/> */
 }
