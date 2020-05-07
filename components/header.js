@@ -21,11 +21,15 @@ export default function Header({
          {/* Images */}
          <meta
             name='twitter:image'
-            content={og ? og : './images/og/og-general.png'}
+            content={
+               og ? og : 'https://ayikfour.now.sh/images/og/og-general.png'
+            }
          />
          <meta
             property='og:image'
-            content={og ? og : './images/og/og-general.png'}
+            content={
+               og ? og : 'https://ayikfour.now.sh/images/og/og-general.png'
+            }
          />
 
          {/* URL */}
