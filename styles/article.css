@@ -21,6 +21,6 @@ article p {
 
 ul,
 ol {
-   @apply .list-outside .mb-8;
-   list-style: initial;
+   @apply .list-inside .mb-8;
+   list-style: inside;
 }

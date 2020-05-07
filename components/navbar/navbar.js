@@ -4,6 +4,7 @@ import ButtonToggle from '../buttons/button-toggle';
 import useDarkMode from 'use-dark-mode';
 import MoonIcon from '../icons/moon';
 import CommandIcon from '../icons/command';
+import GlyphIcon from '../icons/glyph';
 import Link from '../link';
 
 export default function Navbar({ page }) {
@@ -22,7 +23,7 @@ export default function Navbar({ page }) {
                </div>
             </div>
             <div className='flex flex-row items-center space-x-1 '>
-               <NavbarLink text='Writings' href='/' />
+               <NavbarLink text='Overthought' href='/posts' />
                <NavbarLink text='Works' />
                <NavbarLink text='About' />
             </div>

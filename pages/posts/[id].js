@@ -10,7 +10,7 @@ export default function Post({ title, date, contentHtml }) {
          <Head>
             <title>{title}</title>
          </Head>
-         <article className='py-32'>
+         <article className='pt-16 md:pt-32 pb-16'>
             <h1>{title}</h1>
             <p>
                <Date dateString={date} />

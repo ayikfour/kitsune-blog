@@ -16,7 +16,7 @@ h1 {
    @apply text-5xl  .font-bold .tracking-normal .leading-tight .mb-8;
 }
 h2 {
-   @apply text-3xl  .font-bold .tracking-normal .leading-normal .mb-16;
+   @apply text-3xl  .font-bold .tracking-normal .leading-normal;
 }
 h3 {
    @apply .text-xl  .font-medium .tracking-normal .leading-normal .mb-1;
@@ -28,7 +28,7 @@ li {
 }
 
 a:hover {
-   @apply .bg-highlight-cyan;
+   @apply .bg-highlight-cyan .text-black .no-underline;
 }
 
 a {
@@ -63,14 +63,22 @@ body.dark-mode {
    }
 
    & h1,
-   h2,
-   p {
+   h2 {
       color: theme('colors.white');
    }
 
    & button:hover,
    button:focus {
       @apply .bg-accent-7;
+   }
+
+   .content-item {
+      & time {
+         @apply .text-accent-5;
+      }
+      & .reading-time {
+         @apply .text-accent-3;
+      }
    }
 
    & nav {
@@ -107,6 +115,15 @@ body.light-mode {
 
    & svg {
       @apply .stroke-dark;
+   }
+
+   .content-item {
+      & time {
+         @apply .text-accent-3;
+      }
+      & .reading-time {
+         @apply .text-accent-5;
+      }
    }
 
    & nav {
