@@ -10,34 +10,42 @@ html {
 }
 
 @import './syntax-zeit.css';
-@import './article.css';
+@import './markdown.css';
+@import './nprogress.css';
 
 h1 {
-   @apply text-5xl  .font-bold .tracking-normal .leading-tight .mb-8;
+   @apply text-5xl  .font-semibold .tracking-tight .leading-tight;
 }
 h2 {
-   @apply text-3xl  .font-bold .tracking-normal .leading-normal;
+   @apply text-3xl  .font-semibold .tracking-normal .leading-normal;
 }
 h3 {
-   @apply .text-xl  .font-medium .tracking-normal .leading-normal .mb-1;
+   @apply .text-2xl  .font-semibold .tracking-normal .leading-normal;
+}
+h4 {
+   @apply .text-base  .font-light .tracking-normal .leading-normal;
 }
 
 p,
 li {
-   @apply .text-lg  .font-normal .tracking-normal .leading-loose;
+   @apply .text-xl  .font-light .tracking-normal .leading-loose;
 }
 
 a:hover {
    @apply .bg-highlight-cyan .text-black .no-underline;
+   background-image: none;
 }
 
 a {
-   @apply underline;
+   background-image: linear-gradient(gray, gray);
+   background-size: 100% 1px;
+   background-position: left bottom;
+   background-repeat: no-repeat;
 }
 
 :root {
    --header-bg-dark: rgba(19, 20, 21, 0.8);
-   --header-bg-light: rgba(247, 247, 247, 0.8);
+   --header-bg-light: rgba(250, 250, 250, 0.8);
    --selection-on-dark: hsla(0, 0%, 100%, 0.99);
    --selection-on-light: hsla(0, 0%, 0%, 0.99);
 }
@@ -56,6 +64,10 @@ body.dark-mode {
    color: theme('colors.white');
    transition: background-color 0.3s ease;
 
+   & blockquote {
+      @apply .m-0 .border-white .italic .border-l-2 .pl-4 .transition-all .duration-300;
+   }
+
    & ::selection {
       text-shadow: none;
       color: theme('colors.black');
@@ -72,12 +84,21 @@ body.dark-mode {
       @apply .bg-accent-7;
    }
 
-   .content-item {
+   .list-item,
+   article {
       & time {
-         @apply .text-accent-5;
+         @apply .text-accent-3;
       }
       & .reading-time {
-         @apply .text-accent-3;
+         @apply .text-highlight-cyan;
+      }
+   }
+
+   & footer {
+      @apply .border-gray-800 transition-colors duration-300;
+
+      & a {
+         background-image: none;
       }
    }
 
@@ -89,10 +110,11 @@ body.dark-mode {
 
       & a {
          @apply .text-ink-low .no-underline;
+         background-image: none;
       }
-      & a:hover,
-      a:focus {
-         @apply .text-white .bg-accent-7 .border-none .outline-none .rounded-md .no-underline;
+
+      & a:hover {
+         @apply .text-black;
       }
    }
 
@@ -107,6 +129,10 @@ body.light-mode {
    color: theme('colors.black');
    transition: background-color 0.3s ease;
 
+   & blockquote {
+      @apply .m-0 .border-black .italic .border-l-2 .pl-4 .transition-all .duration-300;
+   }
+
    & ::selection {
       text-shadow: none;
       color: theme('colors.white');
@@ -117,12 +143,20 @@ body.light-mode {
       @apply .stroke-dark;
    }
 
-   .content-item {
+   .list-item,
+   article {
       & time {
          @apply .text-accent-3;
       }
       & .reading-time {
-         @apply .text-accent-5;
+         @apply .text-highlight-purple;
+      }
+   }
+
+   & footer {
+      @apply .border-gray-200 transition-colors duration-300;
+      & a {
+         background-image: none;
       }
    }
 
@@ -134,11 +168,7 @@ body.light-mode {
 
       & a {
          @apply .text-ink-medium .no-underline;
-      }
-
-      & a:focus,
-      a:hover {
-         @apply .text-black .border-none .outline-none .rounded-md .no-underline;
+         background-image: none;
       }
    }
 }

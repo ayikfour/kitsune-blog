@@ -1,11 +1,15 @@
 import Layout, { siteTitle } from '../components/layout';
-import { getSortedContentsData } from '../lib/contents';
+import { getSortedWorksData } from '../lib/works';
 import Header from '../components/header';
 import ContentList from '../components/contents/content-list';
+import WorkList from '../components/works/work-list';
 
-const pageTitle = `Overthought – ${siteTitle}`;
+const pageTitle = `Works – ${siteTitle}`;
+const description = `I'm impulsively trying something new. Overdo anything until
+I'm satisfied. Especially in design, dev, and something
+aesthetic.`;
 
-export default function Posts({ allPostsData }) {
+export default function Works({ allWorksData }) {
    return (
       <Layout>
          <Header title={pageTitle} />
@@ -13,14 +17,11 @@ export default function Posts({ allPostsData }) {
             <div className='flex flex-col'>
                <div className='mb-16'>
                   <h2 className='mb-4'>
-                     <span>Overthought</span>
+                     <span>Works</span>
                   </h2>
-                  <p>
-                     This is my 2 cent's of overthinking result about design,
-                     tech, movies, anime, etc etc...
-                  </p>
+                  <p>{description}</p>
                </div>
-               <ContentList data={allPostsData} />
+               <WorkList data={allWorksData} />
             </div>
          </section>
       </Layout>
@@ -28,10 +29,10 @@ export default function Posts({ allPostsData }) {
 }
 
 export function getStaticProps() {
-   const allPostsData = getSortedContentsData();
+   const allWorksData = getSortedWorksData();
    return {
       props: {
-         allPostsData,
+         allWorksData,
       },
    };
 }

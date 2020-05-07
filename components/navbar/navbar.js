@@ -6,26 +6,30 @@ import MoonIcon from '../icons/moon';
 import CommandIcon from '../icons/command';
 import GlyphIcon from '../icons/glyph';
 import Link from '../link';
+import AtIcon from '../icons/at';
+import { containerStyle } from '../layout';
 
 export default function Navbar({ page }) {
    const darkMode = useDarkMode(true);
    return (
-      <nav className='w-screen sticky top-0 mt-8 md:mt-16 py-4'>
-         <div className='flex mx-auto justify-between px-4 max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl md:px-0'>
+      <nav className='w-screen sticky top-0 mt-8 md:mt-16 py-4 z-50'>
+         <div
+            className={`flex mx-auto sticky top-0 justify-between ${containerStyle}`}
+         >
             <div className='flex flex-row md:flex-row flex-shrink-0 -ml-2 mr-2'>
                <div>
                   <ButtonGlyph fileName='command' href='/'>
                      <CommandIcon />
                   </ButtonGlyph>
                </div>
-               <div className='hidden md:block'>
+               <div className=''>
                   <ButtonToggle />
                </div>
             </div>
-            <div className='flex flex-row items-center space-x-1 '>
-               <NavbarLink text='Overthought' href='/posts' />
-               <NavbarLink text='Works' />
-               <NavbarLink text='About' />
+            <div className='flex flex-row items-center space-x-4 '>
+               <Link href='/posts'>Overthought</Link>
+               <Link href='/works'>Works</Link>
+               <Link href=''>About</Link>
             </div>
          </div>
       </nav>

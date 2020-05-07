@@ -1,5 +1,6 @@
 import NextLink from 'next/link';
 import cn from 'classnames';
+
 const canPrefetch = (href) => {
    if (!href || !href.startsWith('/')) {
       return false;

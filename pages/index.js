@@ -1,16 +1,13 @@
-import Head from 'next/head';
 import Header from '../components/header';
-// import Link from 'next/link';
 import ContentList from '../components/contents/content-list';
+import WorkList from '../components/works/work-list';
 import Layout, { siteTitle } from '../components/layout';
-import Date from '../components/date';
-import utilStyles from '../styles/utils.module.css';
+import Section from '../components/section/section';
 import { getSortedContentsData } from '../lib/contents';
-import useDarkMode from 'use-dark-mode';
+import { getSortedWorksData } from '../lib/works';
 import Link from '../components/link';
 
-export default function Home({ allPostsData }) {
-   const darkMode = useDarkMode(true);
+export default function Home({ allContentsData, allWorksData }) {
    return (
       <Layout home className='mb-32 min-h-screen'>
          <Header title={siteTitle} />
@@ -29,30 +26,24 @@ export default function Home({ allPostsData }) {
                passion, and of course about me ✌
             </p>
          </section>
-         <section className='pt-32'>
-            <div className='flex flex-col'>
-               <div className='flex flex-col md:flex-row md:items-end md:space-x-2 mb-8 md:mb-16'>
-                  <h2>
-                     <span>Overthought</span>
-                  </h2>
-                  <p className='font-light text-accent-3'>
-                     <Link href='/posts' className='no-underline'>
-                        / see all →
-                     </Link>
-                  </p>
-               </div>
-               <ContentList data={allPostsData} />
-            </div>
-         </section>
+         <Section name='Overthought' href='/posts'>
+            <ContentList data={allContentsData} />
+         </Section>
+         <Section name='Works' href='/works'>
+            <WorkList data={allWorksData} home />
+         </Section>
       </Layout>
    );
 }
 
 export async function getStaticProps() {
-   const allPostsData = getSortedContentsData();
+   const allContentsData = getSortedContentsData();
+   const allWorksData = getSortedWorksData();
+
    return {
       props: {
-         allPostsData,
+         allContentsData,
+         allWorksData,
       },
    };
 }

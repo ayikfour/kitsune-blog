@@ -19,21 +19,6 @@ Router.events.on('routeChangeError', () => {
 
 export default function App({ Component, pageProps }) {
    const darkMode = useDarkMode(true);
-   console.log('APP', darkMode.value);
-
+   console.log('App using dark mode?:', darkMode.value);
    return <Component {...pageProps} />;
 }
-
-// const handleKeyDown = (e) => {
-//    console.log({ currentKey: e.keyCode });
-//    if (e.keyCode == 84) {
-//       darkMode.toggle();
-//    }
-// };
-
-// useEffect(() => {
-//    document.addEventListener('keydown', handleKeyDown);
-//    return () => {
-//       document.removeEventListener('keydown', handleKeyDown);
-//    };
-// }, []);

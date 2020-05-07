@@ -7,19 +7,15 @@ export default function ContentItem({
    description,
    date,
    readingTime,
+   cover,
 }) {
    return (
-      <li className='mb-10 content-item'>
-         {console.log(id)}
+      <li className='mb-10 list-item'>
          <Link href='/posts/[id]' as={`/posts/${id}`}>
-            <b>{title}</b>
+            {title}
          </Link>
          <p>{description}</p>
-         <p className='flex flex-row space-x-2'>
-            <p className='reading-time'>{readingTime}</p>
-            <span>/</span>
-            <Date dateString={date}></Date>
-         </p>
+         <Date date={date} readingTime={readingTime} />
       </li>
    );
 }
