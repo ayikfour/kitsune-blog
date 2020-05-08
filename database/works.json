@@ -1,12 +1,12 @@
 [
    {
-      "title": "iTunes exploration micro-interaction",
-      "description": "Exploration I did to learn simple prototype animation and interaction in principle",
-      "slug": "itunes-exploration-micro-interaction",
-      "cover": "https://media.giphy.com/media/cjiQYCyoUdbC4wXDTT/giphy.gif",
-      "link": "https://dribbble.com/shots/11069241-iTunes-exploration-design",
+      "title": "Scheds: Schedule and Task manager",
+      "description": "Keeping my sense about design stay sharp by doing another exploration",
+      "slug": "scheds-schedule-and-task-manager",
+      "cover": "https://cdn.dribbble.com/users/2560365/screenshots/11258496/media/9c5b8778fc18b3d23190b301284d905e.png",
+      "link": "https://cdn.dribbble.com/users/2560365/screenshots/11258496/media/9c5b8778fc18b3d23190b301284d905e.png",
       "external": true,
-      "date": "2020-04-15"
+      "date": "2020-05-03"
    },
    {
       "title": "Finmag: Finance management apps",
@@ -16,5 +16,14 @@
       "link": "https://dribbble.com/shots/11216761-Finmag-Finance-Management-Apps",
       "external": true,
       "date": "2020-04-29"
+   },
+   {
+      "title": "iTunes exploration micro-interaction",
+      "description": "Exploration I did to learn simple prototype animation and interaction in principle",
+      "slug": "itunes-exploration-micro-interaction",
+      "cover": "https://media.giphy.com/media/cjiQYCyoUdbC4wXDTT/giphy.gif",
+      "link": "https://dribbble.com/shots/11069241-iTunes-exploration-design",
+      "external": true,
+      "date": "2020-04-15"
    }
 ]

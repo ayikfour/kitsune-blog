@@ -1,5 +1,5 @@
 import styles from '../styles/global.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import useDarkMode from 'use-dark-mode';
 import debounce from 'lodash.debounce';
 import nprogress from 'nprogress';
@@ -19,6 +19,19 @@ Router.events.on('routeChangeError', () => {
 
 export default function App({ Component, pageProps }) {
    const darkMode = useDarkMode(true);
+
+   useEffect(() => {
+      const keyPressHandler = (e) => {
+         if (e.keyCode === 84) {
+            darkMode.toggle();
+         }
+      };
+
+      document.addEventListener('keydown', keyPressHandler);
+      return () => {
+         document.removeEventListener('keydown', keyPressHandler);
+      };
+   });
    console.log('App using dark mode?:', darkMode.value);
    return <Component {...pageProps} />;
 }

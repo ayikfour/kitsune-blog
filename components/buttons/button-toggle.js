@@ -24,6 +24,7 @@ export default function ButtonToggle() {
       <button
          className='hover:bg-accent-2 focus:bg-accent-2 p-2  rounded-md'
          onClick={handleClick}
+         aria-label='button toggle theme'
       >
          {icon}
       </button>

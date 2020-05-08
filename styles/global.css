@@ -62,7 +62,7 @@ button:focus {
 body.dark-mode {
    @apply .bg-accent-8;
    color: theme('colors.white');
-   transition: background-color 0.3s ease;
+   /* transition: background-color 0.3s ease; */
 
    & blockquote {
       @apply .m-0 .border-white .italic .border-l-2 .pl-4 .transition-all .duration-300;
@@ -104,7 +104,7 @@ body.dark-mode {
 
    & nav {
       /* @apply .bg-accent-8; */
-      transition: background-color 0.3s ease;
+      /* transition: background-color 0.3s ease; */
       background-color: var(--header-bg-dark);
       backdrop-filter: saturate(180%) blur(20px);
 
@@ -127,7 +127,7 @@ body.dark-mode {
 body.light-mode {
    @apply .bg-accent-1;
    color: theme('colors.black');
-   transition: background-color 0.3s ease;
+   /* transition: background-color 0.3s ease; */
 
    & blockquote {
       @apply .m-0 .border-black .italic .border-l-2 .pl-4 .transition-all .duration-300;
@@ -162,7 +162,7 @@ body.light-mode {
 
    & nav {
       /* @apply .bg-accent-1; */
-      transition: background-color 0.3s ease;
+      /* transition: background-color 0.3s ease; */
       background-color: var(--header-bg-light);
       backdrop-filter: saturate(180%) blur(20px);
 
