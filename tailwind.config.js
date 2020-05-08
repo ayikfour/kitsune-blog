@@ -1,5 +1,5 @@
 module.exports = {
-   purge: [],
+   purge: ['./components/**/*.js', './pages/**/*.js'],
    theme: {
       extends: {
          colors: {
@@ -131,10 +131,36 @@ module.exports = {
          light: '#FFFFFF',
          accent: '#0070F3',
       }),
+      borderColor: (theme) => ({
+         ...theme('colors'),
+         default: theme('colors.gray.300', 'currentColor'),
+         warning: {
+            light: '#F7B955',
+            default: '#F5A623',
+            dark: '#F49B0B',
+         },
+         success: {
+            light: '#3291FF',
+            default: '#0070F3',
+            dark: '#0366D6',
+         },
+         error: {
+            light: '#FF1A1A',
+            default: '#E00',
+            dark: '#C00',
+         },
+         highlight: {
+            magenta: '#FF0080',
+            purple: '#F81CE5',
+            violet: '#7928CA',
+            cyan: '#79FFE1',
+         },
+      }),
    },
    variants: {
       backgroundColor: ['responsive', 'hover'],
       borderColor: ['responsive', 'focus'],
+      screen: [''],
    },
    plugins: [],
 };

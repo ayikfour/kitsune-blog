@@ -10,9 +10,9 @@ export default function ContentItem({
    cover,
 }) {
    return (
-      <li className='mb-10 list-item'>
+      <li className='mb-16 list-item'>
          <Link href='/posts/[id]' as={`/posts/${id}`}>
-            {title}
+            <b>{title}</b>
          </Link>
          <p>{description}</p>
          <Date date={date} readingTime={readingTime} />

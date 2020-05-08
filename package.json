@@ -8,7 +8,6 @@
       "start": "next start"
    },
    "dependencies": {
-      "@svgr/webpack": "^5.4.0",
       "classnames": "^2.2.6",
       "date-fns": "^2.12.0",
       "gray-matter": "^4.0.2",
@@ -19,13 +18,15 @@
       "prismjs": "^1.20.0",
       "react": "16.13.1",
       "react-dom": "16.13.1",
+      "react-lazy-load": "^3.0.13",
       "react-markdown": "^4.3.1",
-      "react-modal-image": "^2.5.0",
       "reading-time": "^1.2.0",
       "remark": "^12.0.0",
       "use-dark-mode": "^2.3.1"
    },
    "devDependencies": {
+      "@zeit/next-css": "^1.0.1",
+      "next-purgecss": "^4.0.0",
       "postcss-custom-selectors": "^5.1.2",
       "postcss-preset-env": "^6.7.0",
       "tailwindcss": "^1.4.4"

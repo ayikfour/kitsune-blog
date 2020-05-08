@@ -17,25 +17,8 @@ If you're designer especially focusing in User Interface Design or User Experien
 
 > 💡Oh right, in case you don't know this. You can access plugin easily by hitting "Cmd" + "/" in Mac, or "Ctrl" + "/" in Windows. And then just type their name.
 
+![alt text](https://media.giphy.com/media/VIzPBF1rQUfiBYhPTX/giphy.gif 'Figma shortcut runner')
+
 ### 1. Unsplash
 
 The number one most downloaded plugins in Figma.
-
-```js
-const CLIENT_URL =
-   process.env.NODE_ENV === 'production'
-      ? 'https://brianlovin.com'
-      : 'http://localhost:3000';
-
-const endpoint = `${CLIENT_URL}/api/graphql`;
-
-const link = new HttpLink({ uri: endpoint });
-const cache = new InMemoryCache();
-
-export async function getStaticApolloClient() {
-   return new ApolloClient({
-      link,
-      cache,
-   });
-}
-```

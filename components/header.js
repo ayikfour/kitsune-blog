@@ -53,14 +53,14 @@ export default function Header({
          <meta name='twitter:site' content='@paswotnya' />
          <meta name='twitter:creator' content='@paswotnya' />
          <meta name='twitter:title' content={title} />
-
+         {/* 
          <link
             crossOrigin='anonymous'
             rel='preload'
             as='font'
             type='font/woff2'
             href='https://assets.zeit.co/raw/upload/v1582989014/fonts/Inter-roman.var.woff2'
-         />
+         /> */}
       </Head>
    );
 }

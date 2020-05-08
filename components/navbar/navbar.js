@@ -1,16 +1,10 @@
-import NavbarLink from './navbar-link';
 import ButtonGlyph from '../buttons/button-glyph';
 import ButtonToggle from '../buttons/button-toggle';
-import useDarkMode from 'use-dark-mode';
-import MoonIcon from '../icons/moon';
 import CommandIcon from '../icons/command';
-import GlyphIcon from '../icons/glyph';
 import Link from '../link';
-import AtIcon from '../icons/at';
 import { containerStyle } from '../layout';
 
 export default function Navbar({ page }) {
-   const darkMode = useDarkMode(true);
    return (
       <nav className='w-screen sticky top-0 mt-8 md:mt-16 py-4 z-50'>
          <div

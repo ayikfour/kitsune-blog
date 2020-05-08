@@ -1,13 +1,8 @@
-module.exports = {
-   webpack(config) {
-      config.module.rules.push({
-         test: /\.svg$/,
-         issuer: {
-            test: /\.(js|ts)x?$/,
-         },
-         use: ['@svgr/webpack'],
-      });
+// const withCss = require('@zeit/next-css');
+// const withPurgeCss = require('next-purgecss');
 
-      return config;
-   },
-};
+// module.exports = withCss(
+//    withPurgeCss({
+//       purgeCssPaths: ['pages/**/*', 'components/**/*'],
+//    })
+// );

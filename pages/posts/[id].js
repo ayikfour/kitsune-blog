@@ -1,10 +1,13 @@
-import Layout from '../../components/layout';
+import dynamic from 'next/dynamic';
 import Date from '../../components/date';
-import Head from 'next/head';
 import { getAllContentIds, getContentData } from '../../lib/contents';
 import Header from '../../components/header';
-import ModalImage from 'react-modal-image';
-import Image from '../../components/image';
+import LazyLoad from 'react-lazy-load';
+// import Layout from '../../components/layout';
+// import Image from '../../components/image';
+
+const Image = dynamic(() => import('../../components/image'));
+const Layout = dynamic(() => import('../../components/layout'));
 
 export default function Post({
    title,
@@ -22,7 +25,9 @@ export default function Post({
       <Layout>
          <Header title={title} og={cover} description={description} />
          <article className={getArticleClassName()}>
-            <Image title={title} cover={cover} className='mb-16' />
+            <LazyLoad className='mb-16'>
+               <Image title={title} cover={cover} className='mb-16' />
+            </LazyLoad>
             <h1 className='mb-4'>{title}</h1>
             <Date date={date} readingTime={readingTime} />
             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
