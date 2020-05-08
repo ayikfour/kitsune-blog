@@ -4,6 +4,7 @@ import useDarkMode from 'use-dark-mode';
 import debounce from 'lodash.debounce';
 import nprogress from 'nprogress';
 import Router from 'next/router';
+import { useHotkeys } from 'react-hotkeys-hook';
 
 const start = debounce(nprogress.start, 500);
 Router.events.on('routeChangeStart', start);
@@ -20,18 +21,11 @@ Router.events.on('routeChangeError', () => {
 export default function App({ Component, pageProps }) {
    const darkMode = useDarkMode(true);
 
-   useEffect(() => {
-      const keyPressHandler = (e) => {
-         if (e.keyCode === 84) {
-            darkMode.toggle();
-         }
-      };
+   useHotkeys('t', () => darkMode.toggle());
+   useHotkeys('h', () => Router.replace('/'));
+   useHotkeys('w', () => Router.replace('/works'));
 
-      document.addEventListener('keydown', keyPressHandler);
-      return () => {
-         document.removeEventListener('keydown', keyPressHandler);
-      };
-   });
    console.log('App using dark mode?:', darkMode.value);
+
    return <Component {...pageProps} />;
 }

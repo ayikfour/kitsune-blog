@@ -9,7 +9,7 @@ export default function Posts({ allPostsData }) {
    return (
       <Layout>
          <Header title={pageTitle} />
-         <section className='pt-16 md:pt-32 mb-16'>
+         <section className='pt-16 md:pt-32'>
             <div className='flex flex-col'>
                <div className='mb-16'>
                   <h2 className='mb-4'>

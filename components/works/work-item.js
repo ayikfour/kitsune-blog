@@ -2,7 +2,7 @@ import Link from '../link';
 import Date from '../date';
 import dynamic from 'next/dynamic';
 import LazyLoad from 'react-lazy-load';
-// import Image from '../image';
+
 const Image = dynamic(() => import('../image'));
 
 export default function WorkItem({
@@ -14,21 +14,29 @@ export default function WorkItem({
    cover,
    home = null,
    external = true,
+   last = null,
 }) {
+   const getClassName = () => {
+      let base = 'list-item';
+      return last ? base : base + ' mb-16';
+   };
+
    return (
-      <li className='mb-16 list-item'>
-         <Link href={link} external={external}>
-            {!home ? (
-               <LazyLoad className='h-64 w-full mb-8'>
-                  <Image
-                     cover={cover}
-                     title={title}
-                     className='mb-8 h-64 w-full border-dashed border-4 border-highlight-cyan'
-                  />
-               </LazyLoad>
-            ) : null}
-            <b>{title}</b>
-         </Link>
+      <li className={getClassName()}>
+         <h3>
+            <Link href={link} external={external}>
+               {!home ? (
+                  <LazyLoad className='h-64 w-full mb-8'>
+                     <Image
+                        cover={cover}
+                        title={title}
+                        className='mb-8 h-64 w-full '
+                     />
+                  </LazyLoad>
+               ) : null}
+               {title}
+            </Link>
+         </h3>
          <p>{description}</p>
          <Date date={date} />
       </li>

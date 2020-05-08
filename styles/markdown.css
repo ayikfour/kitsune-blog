@@ -12,7 +12,7 @@ pre {
 }
 
 article p {
-   @apply .mb-8;
+   @apply .mb-8 .break-words;
 }
 
 article h2,

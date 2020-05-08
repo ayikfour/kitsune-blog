@@ -1,7 +1,7 @@
-const Sun = () => {
+const Sun = ({ className = null }) => {
    return (
       <svg
-         className='stroke-current'
+         className={`stroke-current ${className}`}
          width='24'
          height='24'
          viewBox='0 0 24 24'

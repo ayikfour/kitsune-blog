@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import styles from './layout.module.css';
-import Link from 'next/link';
+import Link from './link';
 import Navbar from './navbar/navbar';
 import Header from './header';
 import Footer from './layouts/footer';
@@ -13,16 +13,13 @@ export const containerStyle =
 
 export default function Layout({ children, home }) {
    return (
-      <div className=''>
+      <div className='min-h-screen flex flex-col'>
          <Navbar />
-         <Header title={siteTitle} />
-         <main className={`mx-auto ${containerStyle}`}>
+         <main className={`mx-auto flex-1 ${containerStyle}`}>
             <div>{children}</div>
             {!home && (
-               <div>
-                  <Link href='/'>
-                     <a>← Back to home</a>
-                  </Link>
+               <div className='mt-16'>
+                  <Link href='/'>← Back to home</Link>
                </div>
             )}
          </main>

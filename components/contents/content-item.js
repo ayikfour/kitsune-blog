@@ -8,12 +8,17 @@ export default function ContentItem({
    date,
    readingTime,
    cover,
+   last = null,
 }) {
+   const getClassName = () => (last ? 'list-item' : 'mb-16 list-item');
+
    return (
-      <li className='mb-16 list-item'>
-         <Link href='/posts/[id]' as={`/posts/${id}`}>
-            <b>{title}</b>
-         </Link>
+      <li className={getClassName()}>
+         <h3>
+            <Link href='/posts/[id]' as={`/posts/${id}`}>
+               <b>{title}</b>
+            </Link>
+         </h3>
          <p>{description}</p>
          <Date date={date} readingTime={readingTime} />
       </li>

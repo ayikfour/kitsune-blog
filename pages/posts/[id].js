@@ -25,11 +25,11 @@ export default function Post({
       <Layout>
          <Header title={title} og={cover} description={description} />
          <article className={getArticleClassName()}>
-            <LazyLoad className='mb-16'>
-               <Image title={title} cover={cover} className='mb-16' />
-            </LazyLoad>
             <h1 className='mb-4'>{title}</h1>
             <Date date={date} readingTime={readingTime} />
+            <LazyLoad className='md:-mx-8 lg:-mx-8 xl:-mx-16 my-12'>
+               <Image title={title} cover={cover} />
+            </LazyLoad>
             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
          </article>
       </Layout>

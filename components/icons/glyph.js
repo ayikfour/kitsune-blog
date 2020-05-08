@@ -1,7 +1,7 @@
-const Glyph = () => {
+const Glyph = (className = null) => {
    return (
       <svg
-         className='stroke-current'
+         className={`stroke-current ${className}`}
          width='26'
          height='26'
          viewBox='0 0 28 28'

@@ -1,47 +1,51 @@
 @tailwind base;
-@import url('https://rsms.me/inter/inter.css');
-html {
-   font-family: 'Inter', sans-serif;
-}
-@supports (font-variation-settings: normal) {
+/* @import url('https://rsms.me/inter/inter.css'); */
+/* @supports (font-variation-settings: normal) {
    html {
       font-family: 'Inter var', sans-serif;
    }
-}
+} */
 
+@import './inter.css';
 @import './syntax-zeit.css';
 @import './markdown.css';
 @import './nprogress.css';
 
+html {
+   font-family: 'Inter', sans-serif;
+}
+
 h1 {
-   @apply text-5xl  .font-semibold .tracking-tight .leading-tight;
+   @apply .font-medium .tracking-tight .leading-none;
+   font-size: 5rem;
 }
 h2 {
-   @apply text-3xl  .font-semibold .tracking-normal .leading-normal;
+   @apply text-3xl .font-semibold .tracking-normal .leading-normal;
 }
 h3 {
-   @apply .text-2xl  .font-semibold .tracking-normal .leading-normal;
+   @apply .text-2xl .font-semibold .tracking-normal .leading-normal;
 }
 h4 {
-   @apply .text-base  .font-light .tracking-normal .leading-normal;
+   @apply .text-lg .font-light .tracking-normal .leading-normal;
 }
 
 p,
 li {
-   @apply .text-xl  .font-light .tracking-normal .leading-loose;
+   @apply .text-xl .font-light .tracking-normal .leading-loose;
 }
 
+/* Link preflight */
 a:hover {
    @apply .bg-highlight-cyan .text-black .no-underline;
    background-image: none;
 }
-
+/* 
 a {
    background-image: linear-gradient(gray, gray);
    background-size: 100% 1px;
    background-position: left bottom;
    background-repeat: no-repeat;
-}
+} */
 
 :root {
    --header-bg-dark: rgba(17, 17, 17, 0.8);
@@ -64,8 +68,13 @@ body.dark-mode {
    color: theme('colors.white');
    /* transition: background-color 0.3s ease; */
 
+   & h1,
+   h2 {
+      color: theme('colors.white');
+   }
+
    & blockquote {
-      @apply .m-0 .border-white .italic .border-l-2 .pl-4 .transition-all .duration-300;
+      @apply .m-0 .border-white .italic .border-l-2 .pl-4;
    }
 
    & ::selection {
@@ -74,24 +83,16 @@ body.dark-mode {
       background-color: var(--selection-on-dark);
    }
 
-   & h1,
-   h2 {
-      color: theme('colors.white');
-   }
-
    & button:hover,
    button:focus {
       @apply .bg-accent-7;
    }
 
-   .list-item,
-   article {
-      & time {
-         @apply .text-accent-3;
-      }
-      & .reading-time {
-         @apply .text-highlight-cyan;
-      }
+   & time {
+      @apply .text-accent-3;
+   }
+   & .reading-time {
+      @apply .text-highlight-cyan;
    }
 
    & footer {
@@ -109,7 +110,7 @@ body.dark-mode {
       backdrop-filter: saturate(180%) blur(20px);
 
       & a {
-         @apply .text-ink-low .no-underline;
+         @apply .no-underline;
          background-image: none;
       }
 
@@ -139,18 +140,16 @@ body.light-mode {
       background-color: var(--selection-on-light);
    }
 
+   & .reading-time {
+      @apply .text-black .bg-highlight-cyan;
+   }
+
    & svg {
       @apply .stroke-dark;
    }
 
-   .list-item,
-   article {
-      & time {
-         @apply .text-accent-3;
-      }
-      & .reading-time {
-         @apply .text-highlight-purple;
-      }
+   & time {
+      @apply .text-accent-3;
    }
 
    & footer {
@@ -167,7 +166,7 @@ body.light-mode {
       backdrop-filter: saturate(180%) blur(20px);
 
       & a {
-         @apply .text-ink-medium .no-underline;
+         @apply .no-underline;
          background-image: none;
       }
    }

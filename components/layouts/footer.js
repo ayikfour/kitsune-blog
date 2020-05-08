@@ -5,7 +5,7 @@ import Link from '../link';
 
 export default function Footer() {
    return (
-      <footer className='w-full mt-32 border-t'>
+      <footer className='w-full mt-32 border-t bottom-0'>
          <div
             className={`flex justify-center md:justify-between mx-auto py-4 ${containerStyle}`}
          >

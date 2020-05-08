@@ -15,10 +15,31 @@ After using it for few month and feel so helped with this tool, Figma released t
 
 If you're designer especially focusing in User Interface Design or User Experience, I would like to share my recommendation of Figma Plugin that helped to speed up my workflow ✌️
 
-> 💡Oh right, in case you don't know this. You can access plugin easily by hitting "Cmd" + "/" in Mac, or "Ctrl" + "/" in Windows. And then just type their name.
+> 💡Oh right, in case you don't know this. You can access plugin easily by hitting `"Cmd" + "/"` in Mac, or `"Ctrl" + "/"` in Windows. And then just type their name.
 
 ![alt text](https://media.giphy.com/media/VIzPBF1rQUfiBYhPTX/giphy.gif 'Figma shortcut runner')
 
 ### 1. Unsplash
 
 The number one most downloaded plugins in Figma.
+
+```javascript
+class Btn extends React.Component {
+   events = {};
+   constructor(props) {
+      super(props);
+
+      this.state = {
+         id: props.id,
+         text: props.children,
+      };
+   }
+   render() {
+      return (
+         <button type='button' id={this.state.id}>
+            {this.state.text}
+         </button>
+      );
+   }
+}
+```
