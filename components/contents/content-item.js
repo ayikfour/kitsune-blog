@@ -10,13 +10,13 @@ export default function ContentItem({
    cover,
    last = null,
 }) {
-   const getClassName = () => (last ? 'list-item' : 'mb-16 list-item');
+   const getClassName = () => (last ? 'list-item' : 'mb-8 list-item');
 
    return (
       <li className={getClassName()}>
          <h3>
             <Link href='/posts/[id]' as={`/posts/${id}`}>
-               <b>{title}</b>
+               {title}
             </Link>
          </h3>
          <p>{description}</p>

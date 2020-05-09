@@ -6,6 +6,9 @@ import Section from '../components/section/section';
 import { getSortedContentsData } from '../lib/contents';
 import { getSortedWorksData } from '../lib/works';
 import Link from '../components/link';
+import { useHotkeys } from 'react-hotkeys-hook';
+import { useState } from 'react';
+import Commander from '../components/commander';
 
 const description = `The Pragmatic designer, sometime do code for fun, impulsively trying
 something new. This website containing my writing, works,
@@ -15,7 +18,7 @@ export default function Home({ allContentsData, allWorksData }) {
    return (
       <Layout home>
          <Header title={siteTitle} description={description} />
-         <section className='pt-16 md:pt-40'>
+         <section className='pt-16 md:pt-32'>
             <h2 className='mb-8 md:mb-16'>
                <span className='font-thin'>👋</span> <br />
                Arif Eka Brilian

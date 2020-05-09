@@ -3,6 +3,13 @@ import ButtonGlyph from '../buttons/button-glyph';
 import At from '../icons/at';
 import Link from '../link';
 
+const links = [
+   { name: '@', href: 'https://www.twitter.com/paswotnya' },
+   { name: 'dribbble', href: 'https://www.dribbble.com/ayikfour' },
+   { name: 'photos', href: 'https://www.instagram.com/ayikfour_' },
+   { name: 'linkedin', href: 'https://www.linkedin.com/in/ayikfour4/' },
+];
+
 export default function Footer() {
    return (
       <footer className='w-full mt-32 border-t bottom-0'>
@@ -15,12 +22,11 @@ export default function Footer() {
                </Link>
             </div>
             <div className='space-x-4'>
-               <Link href='https://www.twitter.com/paswotnya'>@</Link>
-               <Link href='https://www.dribbble.com/ayikfour'>dribbble</Link>
-               <Link href='https://www.instagram.com/ayikfour4'>photos</Link>
-               <Link href='https://www.linkedin.com/in/ayikfour4/'>
-                  linkedin
-               </Link>
+               {links.map(({ name, href }) => (
+                  <Link key={name} href={href} className='text-fg'>
+                     {name}
+                  </Link>
+               ))}
             </div>
          </div>
       </footer>

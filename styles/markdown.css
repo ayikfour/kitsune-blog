@@ -16,17 +16,24 @@ article p {
 }
 
 article h2,
-article h3,
-article h4 {
+article h3 {
    @apply .mb-4 .pt-8;
 }
 
-.dark-mode article pre {
-   @apply .bg-accent-7 .p-6 .rounded-md;
+article h4 {
+   @apply pt-4;
 }
 
-.light-mode article pre {
-   @apply .bg-hover .p-6 .rounded-md;
+article pre {
+   @apply .bg-shade .p-6 .rounded-md;
+}
+code {
+   @apply .bg-shade .p-1 .mx-1 .rounded;
+   font-family: 'Fira Mono', monospace;
+   font-weight: 400;
+   line-height: 25px;
+   letter-spacing: 0.2px;
+   font-size: 1rem !important;
 }
 
 article ul {
@@ -44,7 +51,6 @@ article ul li.reset {
    display: flex;
    align-items: flex-start;
    list-style-type: none;
-   /* margin-left: -0.5rem; */
    @apply mb-2;
 }
 

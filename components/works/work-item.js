@@ -18,26 +18,27 @@ export default function WorkItem({
 }) {
    const getClassName = () => {
       let base = 'list-item';
-      return last ? base : base + ' mb-16';
+      let marginBottom = home ? 'mb-8' : 'mb-16';
+      return last ? base : `${base} ${marginBottom}`;
    };
 
    return (
       <li className={getClassName()}>
-         <h3>
+         <h3 className='mb-0'>
             <Link href={link} external={external}>
                {!home ? (
                   <LazyLoad className='h-64 w-full mb-8'>
                      <Image
                         cover={cover}
                         title={title}
-                        className='mb-8 h-64 w-full '
+                        className='mb-8 h-64 w-full'
                      />
                   </LazyLoad>
                ) : null}
                {title}
             </Link>
          </h3>
-         <p>{description}</p>
+         <p className='mb-2'>{description}</p>
          <Date date={date} />
       </li>
    );

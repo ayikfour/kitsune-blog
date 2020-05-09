@@ -22,7 +22,7 @@
    font-family: 'Inter';
    font-style: normal;
    font-weight: 300;
-   font-display: block;
+   font-display: optional;
    src: url('https://assets.zeit.co/raw/upload/v1553678905/fonts/Inter-Light.woff2')
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678911/fonts/Inter-Light.woff')
@@ -32,7 +32,7 @@
    font-family: 'Inter';
    font-style: normal;
    font-weight: 400;
-   font-display: block;
+   font-display: optional;
    src: url('https://assets.zeit.co/raw/upload/v1553678908/fonts/Inter-Regular.woff')
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678906/fonts/Inter-Regular.woff2')
@@ -42,7 +42,7 @@
    font-family: 'Inter';
    font-style: normal;
    font-weight: 500;
-   font-display: block;
+   font-display: optional;
    src: url('https://assets.zeit.co/raw/upload/v1553678906/fonts/Inter-Medium.woff2')
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678905/fonts/Inter-Medium.woff')
@@ -52,7 +52,7 @@
    font-family: 'Inter';
    font-style: normal;
    font-weight: 600;
-   font-display: block;
+   font-display: optional;
    src: url('https://assets.zeit.co/raw/upload/v1553678911/fonts/Inter-SemiBold.woff2')
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678910/fonts/Inter-SemiBold.woff')
@@ -62,7 +62,7 @@
    font-family: 'Inter';
    font-style: normal;
    font-weight: 700;
-   font-display: block;
+   font-display: optional;
    src: url('https://assets.zeit.co/raw/upload/v1553678902/fonts/Inter-Bold.woff2')
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678901/fonts/Inter-Bold.woff')

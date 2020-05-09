@@ -4,6 +4,11 @@ import CommandIcon from '../icons/command';
 import Link from '../link';
 import { containerStyle } from '../layout';
 
+const links = [
+   { name: 'Overthought', href: '/posts' },
+   { name: 'Workkks', href: '/works' },
+];
+
 export default function Navbar({ page }) {
    return (
       <nav className='w-screen sticky top-0 mt-8 md:mt-16 py-4 z-50'>
@@ -21,9 +26,11 @@ export default function Navbar({ page }) {
                </div>
             </div>
             <div className='flex flex-row items-center space-x-4 '>
-               <Link href='/posts'>Overthought</Link>
-               <Link href='/works'>Works</Link>
-               <Link href='/'>Music</Link>
+               {links.map(({ name, href }) => (
+                  <Link key={name} href={href} className='text-fg'>
+                     {name}
+                  </Link>
+               ))}
             </div>
          </div>
       </nav>

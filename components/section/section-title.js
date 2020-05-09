@@ -7,9 +7,10 @@ export default function Title({ name, href = null }) {
             <span>{name}</span>
          </h2>
          {href ? (
-            <p className='font-light text-accent-3'>
-               <Link href={href} className='no-underline'>
-                  see all →
+            <p className='font-light'>
+               <Link href={href} className='text-medium-emphasize'>
+                  <span>see all</span>
+                  <span>→</span>
                </Link>
             </p>
          ) : null}
