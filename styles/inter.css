@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
    font-family: 'Inter';
    font-style: normal;
    font-weight: 100;
@@ -7,8 +7,8 @@
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678909/fonts/Inter-Thin.woff')
          format('woff');
-}
-@font-face {
+} */
+/* @font-face {
    font-family: 'Inter';
    font-style: normal;
    font-weight: 200;
@@ -17,7 +17,7 @@
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678905/fonts/Inter-ExtraLight.woff')
          format('woff');
-}
+} */
 @font-face {
    font-family: 'Inter';
    font-style: normal;
@@ -58,7 +58,7 @@
       url('https://assets.zeit.co/raw/upload/v1553678910/fonts/Inter-SemiBold.woff')
          format('woff');
 }
-@font-face {
+/* @font-face {
    font-family: 'Inter';
    font-style: normal;
    font-weight: 700;
@@ -67,8 +67,8 @@
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678901/fonts/Inter-Bold.woff')
          format('woff');
-}
-@font-face {
+} */
+/* @font-face {
    font-family: 'Inter';
    font-style: normal;
    font-weight: 800;
@@ -77,8 +77,8 @@
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1553678902/fonts/Inter-ExtraBold.woff')
          format('woff');
-}
-@font-face {
+} */
+/* @font-face {
    font-family: 'Inter';
    font-style: normal;
    font-weight: 900;
@@ -87,12 +87,12 @@
          format('woff2'),
       url('https://assets.zeit.co/raw/upload/v1582989421/fonts/Inter-Black.woff')
          format('woff');
-}
+} */
 
 /* -------------------------------------------------------
 Variable font.
 */
-@font-face {
+/* @font-face {
    font-family: 'Inter var';
    font-weight: 100 900;
    font-style: normal;
@@ -100,4 +100,4 @@ Variable font.
    font-display: block;
    src: url('https://assets.zeit.co/raw/upload/v1582989014/fonts/Inter-roman.var.woff2')
       format('woff2');
-}
+} */
