@@ -39,13 +39,13 @@ a:hover {
    @apply .bg-highlight-cyan .text-black .no-underline;
    background-image: none;
 }
-/* 
+
 a {
    background-image: linear-gradient(gray, gray);
    background-size: 100% 1px;
    background-position: left bottom;
    background-repeat: no-repeat;
-} */
+}
 
 :root {
    --header-bg-dark: rgba(17, 17, 17, 0.8);
