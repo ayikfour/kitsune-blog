@@ -69,6 +69,8 @@ export default function Header({
             href='https://assets.zeit.co/raw/upload/v1582989014/fonts/Inter-roman.var.woff2'
             crossOrigin='anonymous'
          ></link>
+
+         <link rel='preload' as='script' href='/noflash.js'></link>
       </Head>
    );
 }
