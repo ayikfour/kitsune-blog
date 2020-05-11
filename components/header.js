@@ -54,7 +54,7 @@ export default function Header({
          <meta name='twitter:creator' content='@paswotnya' />
          <meta name='twitter:title' content={title} />
 
-         <link
+         {/* <link
             crossOrigin='anonymous'
             rel='preload'
             as='font'
@@ -68,7 +68,7 @@ export default function Header({
             type='font/woff2'
             href='https://assets.zeit.co/raw/upload/v1582989014/fonts/Inter-roman.var.woff2'
             crossOrigin='anonymous'
-         ></link>
+         ></link> */}
 
          <link rel='preload' as='script' href='/noflash.js'></link>
       </Head>

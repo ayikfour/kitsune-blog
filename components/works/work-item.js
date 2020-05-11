@@ -24,17 +24,17 @@ export default function WorkItem({
 
    return (
       <li className={getClassName()}>
-         <h3 className='mb-0'>
+         <h3 className='mb-4'>
             <Link href={link} external={external}>
                {!home ? (
-                  <LazyLoad className='h-64 w-full mb-8'>
-                     <Image
-                        cover={cover}
-                        title={title}
-                        className='mb-8 h-64 w-full'
-                     />
-                  </LazyLoad>
-               ) : null}
+                  <Image
+                     cover={cover}
+                     title={title}
+                     className='mb-8 h-64 w-full'
+                  />
+               ) : // <LazyLoad className='h-64 w-full mb-8'>
+               //    </LazyLoad>
+               null}
                {title}
             </Link>
          </h3>

@@ -14,7 +14,7 @@ export default function ContentItem({
 
    return (
       <li className={getClassName()}>
-         <h3>
+         <h3 className='mb-4'>
             <Link href='/posts/[id]' as={`/posts/${id}`}>
                {title}
             </Link>

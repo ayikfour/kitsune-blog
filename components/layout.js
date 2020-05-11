@@ -9,7 +9,7 @@ const name = 'Ayik Four';
 export const siteTitle = 'Ayik Four';
 
 export const containerStyle =
-   'px-4 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl md:px-0';
+   'px-4 max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl md:px-0';
 
 export default function Layout({ children, home }) {
    return (

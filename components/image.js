@@ -17,7 +17,8 @@ const Image = ({ title, cover, className }) => {
          src={cover}
          alt={alt}
          role='img'
-         className={`relative rounded-lg object-cover ${className}`}
+         className={`rounded-sm object-cover ${className}`}
+         loading='lazy'
       />
    ) : null;
 };

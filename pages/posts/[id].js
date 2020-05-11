@@ -3,8 +3,6 @@ import Date from '../../components/date';
 import { getAllContentIds, getContentData } from '../../lib/contents';
 import Header from '../../components/header';
 import LazyLoad from 'react-lazy-load';
-// import Layout from '../../components/layout';
-// import Image from '../../components/image';
 
 const Image = dynamic(() => import('../../components/image'));
 const Layout = dynamic(() => import('../../components/layout'));
@@ -29,14 +27,10 @@ export default function Post({
             <Date date={date} readingTime={readingTime} />
             <br></br>
             {cover ? (
-               <LazyLoad className='my-12 h-64'>
-                  <Image
-                     title={title}
-                     cover={cover}
-                     className='w-full h-64 h-64'
-                  />
-               </LazyLoad>
-            ) : null}
+               <Image title={title} cover={cover} className=' my-12' />
+            ) : // <LazyLoad className='my-12 h-64'>
+            // </LazyLoad>
+            null}
             <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
          </article>
       </Layout>
