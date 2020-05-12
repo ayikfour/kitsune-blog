@@ -41,7 +41,7 @@ export default function Post({
                      className='rounded-sm object-cover mb-4 md:-mx-16 shadow-lg'
                      lazyLoad={true}
                   />
-                  <h6 className='text-center text-outline'>
+                  <h6 className='text-medium-emphasize'>
                      {cover.responsiveImage?.alt}
                   </h6>
                </div>
