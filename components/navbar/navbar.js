@@ -33,13 +33,14 @@ export default function Navbar({ page }) {
                </div>
                <div
                   onClick={handleClick}
-                  className='self-end  self-center md:hidden p-2'
+                  className='self-end self-center md:hidden p-2'
                >
                   <ChevronDown />
                </div>
             </div>
             <div
-               className={`flex flex-col items-start md:flex-row md:items-center md:space-x-4 md:inline-flex my-6 md:my-0 ${
+               id='dropdown'
+               className={`flex flex-col items-start md:flex-row md:items-center md:space-x-4 md:inline-flex my-6 md:my-0 transition-all duration-300 ${
                   visibility ? 'inline-flex' : 'hidden'
                }`}
             >

@@ -1,5 +1,5 @@
 :root {
-   --magenta: #ff0080;
+   --magenta: #ff0078;
    --purple: #f81ce5;
    --violet: #7928ca;
    --cyan: #79ffe1;
@@ -7,7 +7,12 @@
    --success: #0070f3;
    --error: #e00;
    --link: #fafafa;
+
    --overlay: rgba(17, 17, 17, 0.315);
+   --inline-code: #bd10e0;
+   --token-string: #028265;
+   --token-keyword: #ff0078;
+   --token-function: #0076ff;
 }
 
 .dark-mode {
@@ -24,6 +29,8 @@
    --high-emphasize: #999;
    --higher-emphasize: #eaeaea;
    --most-emphasize: #fafafa;
+
+   --token-string: #0cc79b;
 }
 
 .light-mode {

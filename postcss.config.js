@@ -4,6 +4,7 @@ module.exports = {
       'postcss-preset-env',
       'postcss-nested',
       'postcss-custom-selectors',
+      'autoprefixer',
       ...(process.env.NODE_ENV === 'production' ? ['autoprefixer'] : []),
    ],
 };

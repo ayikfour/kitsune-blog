@@ -2,6 +2,7 @@ import useDarkMode from 'use-dark-mode';
 import Head from 'next/head';
 
 const baseUrl = 'https://ayikfour.now.sh';
+
 export default function Header({
    title,
    og = null,

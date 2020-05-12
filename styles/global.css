@@ -28,6 +28,10 @@ h3 {
    @apply text-2xl font-semibold tracking-normal leading-normal;
 }
 h4 {
+   @apply text-xl font-semibold tracking-normal leading-normal;
+}
+
+h5 {
    @apply text-base font-light tracking-normal leading-normal;
 }
 

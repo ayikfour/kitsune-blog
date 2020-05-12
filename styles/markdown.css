@@ -17,20 +17,18 @@ article p {
 }
 
 article h2,
-article h3 {
+article h3,
+article h4 {
    @apply .mb-4 .pt-8;
 }
 
 article pre {
-   @apply .bg-shade .p-6 .rounded-md;
+   @apply border-outline border .rounded-md -mt-4 mb-12;
 }
-code {
-   @apply .bg-shade .p-1 .mx-1 .rounded;
-   font-family: 'Fira Mono', monospace;
-   font-weight: 400;
-   line-height: 25px;
-   letter-spacing: 0.2px;
-   font-size: 1rem !important;
+
+p > code {
+   color: var(--inline-code);
+   @apply text-sm mx-2;
 }
 
 article ul {
@@ -66,28 +64,28 @@ input[type='checkbox'] {
    flex-shrink: 0;
    height: 1rem;
    width: 1rem;
-   background-color: white;
+   background-color: var(--bg);
    color: white;
-   border: 1px solid black;
+   border: 1px solid var(--fg);
    border-radius: 3px;
 }
 
 input[type='checkbox']:checked {
-   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white'  xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
    border-color: transparent;
-   background-color: currentColor;
+   background-color: var(--bg);
    background-size: 100% 100%;
-   border: 1px solid black;
+   border: 1px solid var(--fg);
    background-position: center;
    background-repeat: no-repeat;
 }
 
-html.light input[type='checkbox']:checked {
-   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
+.light-mode input[type='checkbox']:checked {
+   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='black' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M5.707 7.293a1 1 0 0 0-1.414 1.414l2 2a1 1 0 0 0 1.414 0l4-4a1 1 0 0 0-1.414-1.414L7 8.586 5.707 7.293z'/%3e%3c/svg%3e");
 }
 
 input[type='checkbox']:focus {
    outline: none;
    box-shadow: 0 0 0 2px gray;
-   border-color: white;
+   border-color: var(--fg);
 }
