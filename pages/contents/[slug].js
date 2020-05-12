@@ -35,11 +35,16 @@ export default function Post({
          />
          <article className={getArticleClassName()}>
             {cover ? (
-               <Image
-                  data={cover.responsiveImage}
-                  className='rounded-sm object-cover my-12 md:-mx-16 shadow-lg'
-                  lazyLoad={true}
-               />
+               <div className='justify-center my-12'>
+                  <Image
+                     data={cover.responsiveImage}
+                     className='rounded-sm object-cover mb-4 md:-mx-16 shadow-lg'
+                     lazyLoad={true}
+                  />
+                  <h6 className='text-center text-outline'>
+                     {cover.responsiveImage?.alt}
+                  </h6>
+               </div>
             ) : null}
             <h1 className='mb-4 pt-4 md:text-6xl break-words md:break-words'>
                {title}

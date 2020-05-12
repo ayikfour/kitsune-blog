@@ -35,6 +35,10 @@ h5 {
    @apply text-base font-light tracking-normal leading-normal;
 }
 
+h6 {
+   @apply text-sm font-light tracking-normal leading-snug;
+}
+
 p,
 li {
    @apply text-lg font-light tracking-normal leading-loose;

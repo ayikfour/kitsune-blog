@@ -23,7 +23,8 @@ article h4 {
 }
 
 article pre {
-   @apply border-outline border .rounded-md -mt-4 mb-12;
+   @apply border-outline border .rounded-md -mt-4 mb-12 p-4;
+   overflow: auto;
 }
 
 p > code {
