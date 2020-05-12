@@ -20,7 +20,7 @@ export default function Home({ allContentsData, allWorksData }) {
          <Header title={siteTitle} description={description} />
          <section className='pt-16 md:pt-32'>
             <h2 className='mb-8 md:mb-16'>
-               <span className='font-thin'>🦊</span> <br />
+               <span className='font-thin'>Hello, I'm</span> <br />
                Arif Eka Brilian
             </h2>
             <p>

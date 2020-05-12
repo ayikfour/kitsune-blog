@@ -1,4 +1,4 @@
-const Chevron = (className = null) => {
+const Chevron = ({ className = null }) => {
    return (
       <svg
          className={`stroke-current ${className}`}

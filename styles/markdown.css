@@ -32,6 +32,16 @@ p > code {
    @apply text-sm mx-2;
 }
 
+:not(pre) > code:after,
+:not(pre) > code:before {
+   content: '\`';
+   color: var(--inline-code);
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
 article ul {
    @apply .list-inside .mb-8;
    padding: 0;

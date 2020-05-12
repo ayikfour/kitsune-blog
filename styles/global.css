@@ -46,13 +46,22 @@ li {
 
 /* Link preflight */
 a:hover {
-   color: var(--link);
-   background: var(--accent);
-   background-size: 4px 100%;
+   color: var(--medium-emphasize);
+   transition: all 0.2s ease-in-out;
+   /* background: var(--accent); */
+   /* background-size: 4px 100%; */
 }
 
 a {
-   @apply text-accent;
+   @apply text-fg;
+   background-image: linear-gradient(
+      var(--low-emphasize),
+      var(--low-emphasize)
+   );
+   background-size: 100% 1px;
+   text-shadow: 0.1em 0 var(--bg), -0.1em 0 var(--bg);
+   background-position: 0 100%;
+   background-repeat: no-repeat;
 }
 
 @tailwind components;
@@ -113,7 +122,8 @@ nav {
    }
 
    & a:hover {
-      color: var(--link);
+      color: var(--fg);
+      background: none;
    }
 }
 

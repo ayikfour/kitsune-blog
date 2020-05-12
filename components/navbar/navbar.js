@@ -2,7 +2,6 @@ import ButtonGlyph from '../buttons/button-glyph';
 import ButtonToggle from '../buttons/button-toggle';
 import CommandIcon from '../icons/command';
 import ChevronDown from '../icons/chevron-down';
-import GlypIcon from '../icons/glyph';
 import Link from '../link';
 import { containerStyle } from '../layout';
 import { useState } from 'react';
@@ -12,7 +11,7 @@ const links = [
    { name: 'Workkks', href: '/works' },
 ];
 
-const navbarStyle = `flex flex-col md:flex-row mx-auto sticky top-0  justify-between`;
+const navbarStyle = `flex flex-col md:flex-row mx-auto sticky top-0 justify-between`;
 
 export default function Navbar({ page }) {
    const [visibility, setVisibility] = useState(false);
@@ -22,11 +21,11 @@ export default function Navbar({ page }) {
    };
 
    return (
-      <nav className='w-screen sticky top-0 mt-8 md:mt-16 py-2 z-50'>
+      <nav className='w-screen top-0 mt-8 md:mt-16 py-2 z-50'>
          <div className={`${navbarStyle} ${containerStyle}`}>
-            <div className='flex flex-row md:flex-row md:justify-start justify-between flex-shrink-0 -ml-2  -mr-2 md:mr-2'>
+            <div className='flex flex-row md:flex-row md:justify-start justify-between flex-shrink-0 -ml-2 -mr-2 md:mr-2'>
                <div>
-                  <ButtonGlyph fileName='command' href='/'>
+                  <ButtonGlyph href='/'>
                      <CommandIcon />
                   </ButtonGlyph>
                   <ButtonToggle />

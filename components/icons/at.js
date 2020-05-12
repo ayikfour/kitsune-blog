@@ -1,4 +1,4 @@
-const At = () => {
+const At = ({ className = null }) => {
    return (
       <svg
          width='25'

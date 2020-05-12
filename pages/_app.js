@@ -23,8 +23,9 @@ export default function App({ Component, pageProps }) {
    useHotkeys('t', () => darkMode.toggle());
    useHotkeys('h', () => Router.replace('/'));
    useHotkeys('w', () => Router.replace('/works'));
+   useHotkeys('c', () => Router.replace('/contents'));
 
-   console.log('App using dark mode?:', darkMode.value);
+   // console.log('App using dark mode?:', darkMode.value);
 
    return <Component {...pageProps} />;
 }
