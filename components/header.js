@@ -9,9 +9,7 @@ export default function Header({
    children,
 }) {
    const getOg = () => {
-      return og
-         ? `${baseUrl}${og}`
-         : 'https://ayikfour.now.sh/images/og/og-general.png';
+      return og ? og : 'https://ayikfour.now.sh/images/og/og-general.png';
    };
 
    const darkMode = useDarkMode(true);

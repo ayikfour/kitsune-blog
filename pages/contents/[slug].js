@@ -64,8 +64,8 @@ export async function getStaticPaths() {
    };
 }
 
-export async function getStaticProps({ params }) {
-   const content = await getContentBySlug(params.slug);
+export async function getStaticProps({ params, preview = null }) {
+   const content = await getContentBySlug(params.slug, preview);
 
    return {
       props: {
