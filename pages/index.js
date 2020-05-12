@@ -33,7 +33,7 @@ export default function Home({ allContentsData, allWorksData }) {
                passion, and of course about me.
             </p>
          </section>
-         <Section name='Overthought' href='/posts'>
+         <Section name='Overthought' href='/contents'>
             <ContentList data={allContentsData} />
          </Section>
          <Section name='Works' href='/works'>

@@ -1,5 +1,4 @@
 import Layout, { siteTitle } from '../components/layout';
-import { getSortedContentsData } from '../lib/contents';
 import Header from '../components/header';
 import ContentList from '../components/contents/content-list';
 import { getAllContentsWithLimit } from '../lib/api';
