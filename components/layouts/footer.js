@@ -17,8 +17,8 @@ export default function Footer() {
             className={`flex justify-center md:justify-between mx-auto py-4 ${containerStyle}`}
          >
             <div className='hidden md:block'>
-               <Link href='/' className=''>
-                  キツネ –– 2020
+               <Link href='/' className='text-fg'>
+                  キツネ
                </Link>
             </div>
             <div className='space-x-4'>

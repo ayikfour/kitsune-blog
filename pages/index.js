@@ -3,12 +3,12 @@ import ContentList from '../components/contents/content-list';
 import WorkList from '../components/works/work-list';
 import Layout, { siteTitle } from '../components/layout';
 import Section from '../components/section/section';
-import { getSortedContentsData } from '../lib/contents';
 import { getSortedWorksData } from '../lib/works';
 import Link from '../components/link';
 import { useHotkeys } from 'react-hotkeys-hook';
 import { useState } from 'react';
 import Commander from '../components/commander';
+import { getAllContentsWithLimit } from '../lib/api';
 
 const description = `The Pragmatic designer, sometime do code for fun, impulsively trying
 something new. This website containing my writing, works,
@@ -20,13 +20,13 @@ export default function Home({ allContentsData, allWorksData }) {
          <Header title={siteTitle} description={description} />
          <section className='pt-16 md:pt-32'>
             <h2 className='mb-8 md:mb-16'>
-               <span className='font-thin'>👋</span> <br />
+               <span className='font-thin'>🦊</span> <br />
                Arif Eka Brilian
             </h2>
             <p>
                An{' '}
                <Link external href='https://www.dribbble.com/ayikfour'>
-                  user Interface Designer
+                  <b>User Interface Designer</b>
                </Link>{' '}
                –– The Pragmatic, sometime do code for fun, impulsively trying
                something new. This website containing my writing, works,
@@ -44,7 +44,7 @@ export default function Home({ allContentsData, allWorksData }) {
 }
 
 export async function getStaticProps() {
-   const allContentsData = getSortedContentsData();
+   const allContentsData = await getAllContentsWithLimit(3);
    const allWorksData = getSortedWorksData();
 
    return {

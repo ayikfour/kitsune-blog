@@ -1,5 +1,4 @@
 import cn from 'classnames';
-import { useState } from 'react';
 
 const canPreload = (href) => {
    if (!href || !href.startsWith('/')) {
@@ -9,12 +8,12 @@ const canPreload = (href) => {
    return true;
 };
 
-const Image = ({ title, cover, className }) => {
+const Image = ({ title, url, className }) => {
    let alt = `${title} cover`;
 
-   return cover ? (
+   return url ? (
       <img
-         src={cover}
+         src={url}
          alt={alt}
          role='img'
          className={`rounded-sm object-cover ${className}`}

@@ -1,5 +1,4 @@
 import styles from '../styles/global.css';
-import { useEffect } from 'react';
 import useDarkMode from 'use-dark-mode';
 import debounce from 'lodash.debounce';
 import nprogress from 'nprogress';

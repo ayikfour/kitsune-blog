@@ -21,6 +21,7 @@ module.exports = {
          purple: 'var(--purple)',
          violet: 'var(--violet)',
          cyan: 'var(--cyan)',
+         overlay: 'var(--overlay)',
       },
       textColor: (theme) => ({
          ...theme('colors'),

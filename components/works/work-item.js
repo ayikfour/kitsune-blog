@@ -1,9 +1,8 @@
 import Link from '../link';
 import Date from '../date';
 import dynamic from 'next/dynamic';
-import LazyLoad from 'react-lazy-load';
 
-const Image = dynamic(() => import('../image'));
+const Image = dynamic(() => import('../image').then((mod) => mod.default));
 
 export default function WorkItem({
    slug,
@@ -24,22 +23,20 @@ export default function WorkItem({
 
    return (
       <li className={getClassName()}>
-         <h3 className='mb-4'>
+         <p className='mb-2'>
             <Link href={link} external={external}>
                {!home ? (
                   <Image
-                     cover={cover}
+                     url={cover}
                      title={title}
                      className='mb-8 h-64 w-full'
                   />
-               ) : // <LazyLoad className='h-64 w-full mb-8'>
-               //    </LazyLoad>
-               null}
-               {title}
+               ) : null}
+               <b>{title}</b>
             </Link>
-         </h3>
-         <p className='mb-2'>{description}</p>
-         <Date date={date} />
+         </p>
+         <p className='mb-2 leading-normal'>{description}</p>
+         <Date dateString={date} />
       </li>
    );
 }

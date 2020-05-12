@@ -9,13 +9,13 @@ const name = 'Ayik Four';
 export const siteTitle = 'Ayik Four';
 
 export const containerStyle =
-   'px-4 max-w-xs sm:max-w-md md:max-w-xl lg:max-w-2xl md:px-0';
+   'px-4 max-w-sm sm:max-w-md md:max-w-xl lg:max-w-2xl md:px-0';
 
 export default function Layout({ children, home }) {
    return (
       <div className='min-h-screen flex flex-col'>
          <Navbar />
-         <main className={`mx-auto flex-1 ${containerStyle}`}>
+         <main className={`mx-auto flex-1 w-full ${containerStyle}`}>
             <div>{children}</div>
             {!home && (
                <div className='mt-16'>

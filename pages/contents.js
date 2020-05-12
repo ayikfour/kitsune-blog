@@ -2,10 +2,11 @@ import Layout, { siteTitle } from '../components/layout';
 import { getSortedContentsData } from '../lib/contents';
 import Header from '../components/header';
 import ContentList from '../components/contents/content-list';
+import { getAllContentsWithLimit } from '../lib/api';
 
 const pageTitle = `Overthought – ${siteTitle}`;
 
-export default function Posts({ allPostsData }) {
+export default function Posts({ allContents }) {
    return (
       <Layout>
          <Header title={pageTitle} />
@@ -20,18 +21,19 @@ export default function Posts({ allPostsData }) {
                      tech, movies, anime, etc etc...
                   </p>
                </div>
-               <ContentList data={allPostsData} />
+               <ContentList data={allContents} />
             </div>
          </section>
       </Layout>
    );
 }
 
-export function getStaticProps() {
-   const allPostsData = getSortedContentsData();
+export async function getStaticProps() {
+   const allContents = await getAllContentsWithLimit(15);
+
    return {
       props: {
-         allPostsData,
+         allContents,
       },
    };
 }
