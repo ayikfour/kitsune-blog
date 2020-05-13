@@ -47,11 +47,13 @@ export default function Navbar({ page }) {
       <nav className='w-screen sticky top-0 mt-8 md:mt-16 py-2 z-50 border-b border-shade'>
          <div className={`${navbarStyle} ${containerStyle}`}>
             <div className='flex flex-col md:flex-row w-full justify-between flex-shrink-0'>
-               <Link className='self-center py-2 md:items-center text-fg font-semibold'>
+               <Link
+                  className='self-center py-2 md:items-center text-fg font-semibold'
+                  href='/'
+               >
                   キツネ
                </Link>
                <div
-                  href='/'
                   id='menu-container'
                   className='space-x-4 flex mt-1 md:mt-0 items-center justify-center whitespace-no-wrap overflow-x-scroll transform transition-all duration-300 ease-in-out'
                >
