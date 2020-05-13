@@ -22,7 +22,7 @@ export default function ButtonToggle() {
 
    return (
       <button
-         className='hover:bg-accent-2 focus:bg-accent-2 p-2  rounded-md'
+         className='hover:bg-accent-2 focus:bg-accent-2 p-2 rounded-md transform scale-75'
          onClick={handleClick}
          aria-label='button toggle theme'
       >

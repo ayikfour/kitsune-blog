@@ -15,9 +15,5 @@ export default function WorkList({ data = [], home }) {
          );
       });
    };
-   return (
-      <ul className='list-none'>
-         <WorkItems />
-      </ul>
-   );
+   return <WorkItems />;
 }

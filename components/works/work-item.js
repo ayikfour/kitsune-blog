@@ -22,7 +22,7 @@ export default function WorkItem({
    };
 
    return (
-      <li className={getClassName()}>
+      <div className={getClassName()}>
          <p className='mb-2'>
             <Link href={link} external={external}>
                {!home ? (
@@ -37,6 +37,6 @@ export default function WorkItem({
          </p>
          <p className='mb-2 leading-normal'>{description}</p>
          <Date dateString={date} />
-      </li>
+      </div>
    );
 }

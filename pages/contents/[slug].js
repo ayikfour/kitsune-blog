@@ -21,7 +21,7 @@ export default function Post({
    content,
 }) {
    const getArticleClassName = () => {
-      return cover ? 'pt-16 md:pt-4 pb-16' : 'pt-16 md:pt-32 pb-16';
+      return cover ? 'pt-8 md:pt-4 pb-16' : 'pt-16 md:pt-32 pb-16';
    };
 
    const renderedHTML = renderMarkdown(content);

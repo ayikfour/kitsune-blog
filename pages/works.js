@@ -1,13 +1,28 @@
 import Layout, { siteTitle } from '../components/layout';
 import { getSortedWorksData } from '../lib/works';
 import Header from '../components/header';
-import ContentList from '../components/contents/content-list';
-import WorkList from '../components/works/work-list';
+import WorkGrid from '../components/works/work-grid';
 
 const pageTitle = `Works – ${siteTitle}`;
 const description = `I'm impulsively trying something new. Overdo anything until
 I'm satisfied. Especially in design, dev, and something
 aesthetic.`;
+
+const WorkItems = ({ data }) => {
+   return data.map((work) => {
+      return (
+         <div className='work-item-card list-item p-4 rounded-md hover:bg-bg hover:shadow-xl transform hover:-translate-y-4 transition duration-500 ease-in-out'>
+            <Link href={work.link} external={work.external}>
+               <Image
+                  url={work.cover}
+                  title={work.title}
+                  className='h-64 w-full'
+               />
+            </Link>
+         </div>
+      );
+   });
+};
 
 export default function Works({ allWorksData }) {
    return (
@@ -21,7 +36,7 @@ export default function Works({ allWorksData }) {
                   </h2>
                   <p>{description}</p>
                </div>
-               <WorkList data={allWorksData} />
+               <WorkGrid data={allWorksData} />
             </div>
          </section>
       </Layout>

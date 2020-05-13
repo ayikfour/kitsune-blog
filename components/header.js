@@ -6,7 +6,7 @@ const baseUrl = 'https://ayikfour.now.sh';
 export default function Header({
    title,
    og = null,
-   description = 'Ayikfour personal overthought',
+   description = 'Ayikfour personal thoughts',
    children,
 }) {
    const getOg = () => {

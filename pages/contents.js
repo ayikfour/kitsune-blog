@@ -3,7 +3,7 @@ import Header from '../components/header';
 import ContentList from '../components/contents/content-list';
 import { getAllContentsWithLimit } from '../lib/api';
 
-const pageTitle = `Overthought – ${siteTitle}`;
+const pageTitle = `Thoughttts – ${siteTitle}`;
 
 export default function Posts({ allContents }) {
    return (
@@ -13,7 +13,7 @@ export default function Posts({ allContents }) {
             <div className='flex flex-col'>
                <div className='mb-16'>
                   <h2 className='mb-4'>
-                     <span>Overthought</span>
+                     <span>Thoughttts</span>
                   </h2>
                   <p>
                      This is my 2 cent's of overthinking result about design,

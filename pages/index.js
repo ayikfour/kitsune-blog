@@ -18,11 +18,8 @@ export default function Home({ allContentsData, allWorksData }) {
    return (
       <Layout home>
          <Header title={siteTitle} description={description} />
-         <section className='pt-16 md:pt-32'>
-            <h2 className='mb-8 md:mb-16'>
-               <span className='font-thin'>Hello, I'm</span> <br />
-               Arif Eka Brilian
-            </h2>
+         <section className='pt-32 md:pt-40'>
+            <h2 className='mb-8 md:mb-16'>Arif Eka Brilian</h2>
             <p>
                An{' '}
                <Link external href='https://www.dribbble.com/ayikfour'>
@@ -33,10 +30,10 @@ export default function Home({ allContentsData, allWorksData }) {
                passion, and of course about me.
             </p>
          </section>
-         <Section name='Overthought' href='/contents'>
+         <Section name='Thoughttts' href='/contents'>
             <ContentList data={allContentsData} />
          </Section>
-         <Section name='Works' href='/works'>
+         <Section name='Workkks' href='/works'>
             <WorkList data={allWorksData} home />
          </Section>
       </Layout>
