@@ -41,13 +41,13 @@ h6 {
 
 p,
 li {
-   @apply text-lg font-light tracking-normal leading-loose;
+   @apply text-base leading-loose font-normal;
 }
 
 /* Link preflight */
 a:hover {
    color: var(--medium-emphasize);
-   transition: all 0.2s ease-in-out;
+   transition: color 0.2s ease-in-out;
    /* background: var(--accent); */
    /* background-size: 4px 100%; */
 }
@@ -55,12 +55,12 @@ a:hover {
 a {
    @apply text-fg;
    background-image: linear-gradient(
-      var(--low-emphasize),
-      var(--low-emphasize)
+      var(--medium-emphasize),
+      var(--medium-emphasize)
    );
    background-size: 100% 1px;
    text-shadow: 0.1em 0 var(--bg), -0.1em 0 var(--bg);
-   background-position: 0 100%;
+   background-position: 0 bottom;
    background-repeat: no-repeat;
 }
 
@@ -98,7 +98,8 @@ h3 {
    @apply text-most-emphasize;
 }
 
-p {
+p,
+li {
    @apply text-higher-emphasize;
 }
 
@@ -118,6 +119,7 @@ nav {
    backdrop-filter: saturate(180%) blur(16px);
 
    & a {
+      text-shadow: none;
       background-image: none;
    }
 

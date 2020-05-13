@@ -3,12 +3,10 @@ import Date from '../date';
 
 export default function ContentItem({
    slug,
-   id,
    title,
    description,
-   createdAt,
-   author,
    date,
+   author,
    last = null,
 }) {
    const getClassName = () => (last ? 'list-item' : 'mb-8 list-item');
@@ -17,11 +15,11 @@ export default function ContentItem({
       <li className={getClassName()}>
          <p className='mb-1'>
             <Link href='/contents/[slug]' as={`/contents/${slug}`}>
-               <b>{title}</b>
+               {title}
             </Link>
          </p>
          <p className='mb-1 leading-normal'>{description}</p>
-         <Date dateString={createdAt} />
+         <Date dateString={date} />
       </li>
    );
 }

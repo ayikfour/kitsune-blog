@@ -12,24 +12,54 @@ pre {
 -ms-user-select: all;
 user-select: all; */
 
-article p {
-   @apply .mb-8 .break-words;
-}
+article {
+   pre {
+      @apply border-outline border .rounded  mb-8 p-4;
+      overflow: auto;
+   }
+   .code-alt {
+      @apply mb-8 -mt-6 text-xs text-outline text-center;
+   }
+   h2,
+   h3 {
+      @apply mb-4 pt-4;
+   }
+   h4 {
+      @apply mb-4 pt-4;
+   }
+   p {
+      @apply mb-4 break-words;
+   }
+   li {
+      @apply text-higher-emphasize;
+   }
+   ul {
+      @apply .list-inside .mb-4;
+      padding: 0;
+      list-style-type: circle;
+   }
+   ol {
+      padding: 1rem;
+      list-style-position: outside;
+   }
 
-article h2,
-article h3,
-article h4 {
-   @apply .mb-4 .pt-8;
-}
+   ul li.reset {
+      display: flex;
+      align-items: flex-start;
+      list-style-type: none;
+      @apply mb-2;
+   }
 
-article pre {
-   @apply border-outline border .rounded-md -mt-4 mb-12 p-4;
-   overflow: auto;
+   ul li.reset .check {
+      display: flex;
+      align-items: center;
+      margin-right: 1rem;
+   }
 }
 
 p > code {
    color: var(--inline-code);
-   @apply text-sm mx-2;
+   @apply text-xs mx-1;
 }
 
 :not(pre) > code:after,
@@ -40,30 +70,6 @@ p > code {
    -moz-user-select: none;
    -ms-user-select: none;
    user-select: none;
-}
-
-article ul {
-   @apply .list-inside .mb-8;
-   padding: 0;
-   list-style-type: circle;
-}
-
-article ol {
-   padding: 1rem;
-   list-style-position: outside;
-}
-
-article ul li.reset {
-   display: flex;
-   align-items: flex-start;
-   list-style-type: none;
-   @apply mb-2;
-}
-
-article ul li.reset .check {
-   display: flex;
-   align-items: center;
-   margin-right: 1rem;
 }
 
 input[type='checkbox'] {

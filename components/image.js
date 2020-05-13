@@ -8,9 +8,7 @@ const canPreload = (href) => {
    return true;
 };
 
-const Image = ({ title, url, className }) => {
-   let alt = `${title} cover`;
-
+const Image = ({ alt, url, className }) => {
    return url ? (
       <img
          src={url}

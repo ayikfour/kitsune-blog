@@ -30,7 +30,6 @@ yarn-error.log*
 .env.production.local
 .env 
 
-#md files
-/contents
+/contents/draft-*.md
 
 .vercel

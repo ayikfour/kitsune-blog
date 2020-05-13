@@ -11,7 +11,7 @@ export default function Error({ status }) {
          <Header title={title} />
 
          {status === 404 ? (
-            <Section name="Hmm seems you've got lost">
+            <Section name="💁‍♂️ Hmm seems you've got lost">
                <p>
                   <blockquote cite='http://www.aaronsw.com/weblog/visitingmit'>
                      <p>
@@ -26,7 +26,7 @@ export default function Error({ status }) {
                            external
                            href='http://www.aaronsw.com/weblog/visitingmit'
                         >
-                           <cite>I Love the University</cite>
+                           <cite>The dali's</cite>
                         </Link>
                      </footer>
                   </blockquote>

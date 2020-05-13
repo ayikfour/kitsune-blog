@@ -23,7 +23,7 @@ export default function WorkItem({
 
    return (
       <div className={getClassName()}>
-         <p className='mb-2'>
+         <p className='mb-1'>
             <Link href={link} external={external}>
                {!home ? (
                   <Image
@@ -32,10 +32,10 @@ export default function WorkItem({
                      className='mb-8 h-64 w-full'
                   />
                ) : null}
-               <b>{title}</b>
+               {title}
             </Link>
          </p>
-         <p className='mb-2 leading-normal'>{description}</p>
+         <p className='mb-1 leading-normal'>{description}</p>
          <Date dateString={date} />
       </div>
    );

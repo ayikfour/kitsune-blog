@@ -1,10 +1,7 @@
-import calcReadTime from 'reading-time';
-
-export default function ReadTime({ content }) {
-   const readingTime = calcReadTime(content).text;
+export default function ReadTime({ time }) {
    return (
       <h5 className='text-fg'>
-         <b>{readingTime}</b>
+         <b>{time}</b>
       </h5>
    );
 }

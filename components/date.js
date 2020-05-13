@@ -1,8 +1,10 @@
-import { parseISO, format } from 'date-fns';
+import { parseISO, format, formatDistance } from 'date-fns';
 
-export default function Date({ dateString }) {
+export default function DateComponent({ dateString }) {
    const date = parseISO(dateString);
    return (
-      <h5 className='text-medium-emphasize'>{format(date, 'LLLL d, yyyy')}</h5>
+      <h5 className='text-low-emphasize'>
+         {formatDistance(new Date(), date)} ago
+      </h5>
    );
 }

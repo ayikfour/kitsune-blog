@@ -1,0 +1,26 @@
+// const handleScroll = (e) => {
+   //    const window = e.currentTarget;
+   //    const distanceY =
+   //       window.pageYOffset || document.documentElement.scrollTop;
+   //    const shrinkOn = 200;
+
+   //    const kitsune = document.getElementsByClassName('kitsune')[0];
+   //    if (distanceY > shrinkOn) {
+   //       kitsune.classList.remove('text-2xl');
+   //    } else {
+   //       kitsune.classList.add('text-2xl');
+   //    }
+   //    // if (prevScroll > window.scrollY) {
+   //    //    console.log('scrolling up', window.scrollY);
+   //    // } else if (prevScroll < window.scrollY) {
+   //    //    console.log('scrolling down', window.scrollY);
+   //    // }
+
+   //    setPrevScroll(window.scrollY);
+   // };
+
+   // useEffect(() => {
+   //    setPrevScroll(window.scrollY);
+   //    window.addEventListener('scroll', handleScroll);
+   //    return () => window.removeEventListener('scroll', handleScroll);
+   // }, [prevScroll]);

@@ -2,6 +2,7 @@ import Layout, { siteTitle } from '../components/layout';
 import Header from '../components/header';
 import ContentList from '../components/contents/content-list';
 import { getAllContentsWithLimit } from '../lib/api';
+import { getSortedContentsMetadata } from '../lib/contents';
 
 const pageTitle = `Thoughttts – ${siteTitle}`;
 
@@ -28,7 +29,8 @@ export default function Posts({ allContents }) {
 }
 
 export async function getStaticProps() {
-   const allContents = await getAllContentsWithLimit(15);
+   // const allContents = await getAllContentsWithLimit(15);
+   const allContents = await getSortedContentsMetadata();
 
    return {
       props: {

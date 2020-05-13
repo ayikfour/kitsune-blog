@@ -17,7 +17,11 @@ export default function Footer() {
             className={`flex justify-center md:justify-between mx-auto py-4 ${containerStyle}`}
          >
             <div className='hidden md:block'>
-               <Link href='mailto:ayikfour@gmail.com' className='text-fg'>
+               <Link
+                  href='mailto:ayikfour@gmail.com'
+                  external
+                  className='text-fg'
+               >
                   👋say hi
                </Link>
             </div>

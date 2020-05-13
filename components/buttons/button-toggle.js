@@ -30,18 +30,3 @@ export default function ButtonToggle() {
       </button>
    );
 }
-
-/* <img src={src}></img> */
-// const [src, setSrc] = useState('');
-
-// const getFilePath = () => {
-//    const filePath = `/glyph/${getGlyphName()}-${getGlyphModifier()}.svg`;
-//    return filePath;
-// };
-// const getGlyphModifier = () => {
-//    return darkMode.value ? 'onDark' : 'onLight';
-// };
-
-// const getGlyphName = () => {
-//    return darkMode.value ? 'sun' : 'moon';
-// };
