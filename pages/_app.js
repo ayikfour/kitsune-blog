@@ -1,9 +1,11 @@
 import styles from '../styles/global.css';
+import 'react-toastify/dist/ReactToastify.min.css';
 import useDarkMode from 'use-dark-mode';
 import debounce from 'lodash.debounce';
 import nprogress from 'nprogress';
 import Router from 'next/router';
 import { useHotkeys } from 'react-hotkeys-hook';
+import { ToastContainer } from 'react-toastify';
 
 const start = debounce(nprogress.start, 500);
 Router.events.on('routeChangeStart', start);
@@ -25,7 +27,10 @@ export default function App({ Component, pageProps }) {
    useHotkeys('w', () => Router.replace('/works'));
    useHotkeys('c', () => Router.replace('/contents'));
 
-   // console.log('App using dark mode?:', darkMode.value);
-
-   return <Component {...pageProps} />;
+   return (
+      <div>
+         <Component {...pageProps} />
+         <ToastContainer closeButton={false} limit={1} />
+      </div>
+   );
 }

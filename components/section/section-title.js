@@ -7,7 +7,7 @@ export default function Title({ name, href = null }) {
             <span>{name}</span>
          </h2>
          {href ? (
-            <p className='leading-tight'>
+            <p className='leading-none'>
                /
                <Link href={href} className='text-outline text-lg'>
                   <span className='mr-2'> see all</span>

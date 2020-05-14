@@ -14,11 +14,11 @@ user-select: all; */
 
 article {
    pre {
-      @apply border-outline border .rounded  mb-8 p-4;
+      @apply border-outline cursor-pointer border .rounded  mb-8 p-3 pr-4;
       overflow: auto;
    }
    .code-alt {
-      @apply mb-8 -mt-6 text-xs text-outline text-center;
+      @apply mb-8 -mt-6 text-xs text-low-emphasize text-center;
    }
    h2,
    h3 {

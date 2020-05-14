@@ -6,7 +6,8 @@
    --warning: #f5a623;
    --success: #0070f3;
    --error: #e00;
-   --link: #fafafa;
+   --white: #fafafa;
+   --black: #111;
    --overlay: rgba(17, 17, 17, 0.315);
 
    --token-keyword: #ff0078;
@@ -16,7 +17,7 @@
 .dark-mode {
    --bg: #111;
    --fg: #fafafa;
-   --bg-header: rgba(17, 17, 17, 0.8);
+   --bg-header: rgba(17, 17, 17, 0.7);
    --accent: var(--fg);
    --selection: hsla(0, 0%, 100%, 0.99);
 

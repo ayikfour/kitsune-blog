@@ -1,7 +1,5 @@
 import ButtonGlyph from '../buttons/button-glyph';
 import ButtonToggle from '../buttons/button-toggle';
-import CommandIcon from '../icons/command';
-import ChevronDown from '../icons/chevron-down';
 import Link from '../link';
 import { containerStyle } from '../layout';
 import { useState, useEffect } from 'react';
@@ -9,17 +7,14 @@ import { useState, useEffect } from 'react';
 const links = [
    { name: 'Thoughts', href: '/contents' },
    { name: 'Works', href: '/works' },
+   { name: 'About', href: '/' },
 ];
 
 const navbarStyle = `flex flex-row  mx-auto items-center top-0 justify-between`;
 
 export default function Navbar({ page }) {
-   const [visibility, setVisibility] = useState(false);
-   const [prevScroll, setPrevScroll] = useState();
-
-   const handleClick = () => {
-      setVisibility(!visibility);
-   };
+   const [prevScroll, setPrevScroll] = useState(0);
+   const [isOnTop, setIsOnTop] = useState(true);
 
    const handleScroll = (e) => {
       const window = e.currentTarget;
@@ -28,10 +23,22 @@ export default function Navbar({ page }) {
       const thresholdUp = 75;
 
       const menu = document.getElementById('menu-container');
-      if (prevScroll > thresholdDown) {
-         menu.classList.add('hidden');
-      } else if (prevScroll < thresholdUp) {
-         menu.classList.remove('hidden');
+      const navbar = document.getElementById('navbar');
+      const kitsune = document.getElementById('kitsune');
+
+      if (currentY < 50) {
+         setIsOnTop(true);
+      }
+
+      if (prevScroll < currentY) {
+         menu.classList.add('opacity-0');
+         kitsune.classList.add('to-center');
+         navbar.classList.add('border-b', 'border-shade');
+         setIsOnTop(false);
+      } else if (prevScroll > currentY + 25 || isOnTop) {
+         menu.classList.remove('opacity-0');
+         kitsune.classList.remove('to-center');
+         navbar.classList.remove('border-b', 'border-shade');
       }
 
       setPrevScroll(window.scrollY);
@@ -41,24 +48,33 @@ export default function Navbar({ page }) {
       setPrevScroll(window.scrollY);
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
-   }, [prevScroll]);
+   }, []);
 
    return (
-      <nav className='w-screen sticky top-0 mt-8 md:mt-16 py-2 z-50 border-b border-shade'>
+      <nav
+         id='navbar'
+         className='w-screen sticky top-0 mt-8 md:mt-16 py-2 z-50'
+      >
          <div className={`${navbarStyle} ${containerStyle}`}>
-            <div className='flex flex-col md:flex-row w-full justify-between flex-shrink-0'>
+            <div className='flex flex-row relative  w-full justify-end flex-shrink-0 space-x-8'>
+               {/* <Link
+                  id='kitsune'
+                  className='self-center flex-shrink-0 py-2 md:items-center text-fg font-semibold'
+                  href='/'
+               > */}
                <Link
-                  className='self-center py-2 md:items-center text-fg font-semibold'
+                  id='kitsune'
+                  className='flex-shrink-0 py-2 md:items-center text-fg font-semibold transition-all duration-300 ease-in-out'
                   href='/'
                >
                   キツネ
                </Link>
                <div
                   id='menu-container'
-                  className='space-x-4 flex mt-1 md:mt-0 items-center justify-center whitespace-no-wrap overflow-x-scroll transform transition-all duration-300 ease-in-out'
+                  className='flex items-center whitespace-no-wrap overflow-x-scroll transform transition-all duration-300 ease-in-out'
                >
                   {links.map(({ name, href }) => (
-                     <Link key={name} href={href} className='text-fg'>
+                     <Link key={name} href={href} className='text-fg px-2'>
                         {name}
                      </Link>
                   ))}

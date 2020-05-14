@@ -36,6 +36,7 @@ const Link = ({
    return (
       <>
          <NextLink
+            scroll={false}
             href={href}
             as={as}
             prefetch={canPrefetch(href) ? undefined : false}

@@ -4,7 +4,7 @@ import Image from '../image';
 const WorkItems = ({ data }) => {
    return data.map((work) => {
       return (
-         <div className='work-item-card list-item rounded-md hover:bg-bg hover:shadow-xl transform hover:-translate-y-4 transition duration-500 ease-in-out'>
+         <div className='work-item-card list-item rounded-md'>
             <Link href={work.link} external={work.external}>
                <Image
                   url={work.cover}

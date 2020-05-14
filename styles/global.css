@@ -18,19 +18,20 @@ html {
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; */
 }
 
+/* typography preflight */
+/* header */
 h1 {
-   @apply text-4xl font-semibold tracking-tight leading-none;
+   @apply text-4xl font-semibold tracking-tight leading-none text-most-emphasize;
 }
 h2 {
-   @apply text-3xl font-semibold tracking-normal leading-normal;
+   @apply text-3xl font-semibold tracking-normal leading-normal text-most-emphasize;
 }
 h3 {
-   @apply text-2xl font-semibold tracking-normal leading-normal;
+   @apply text-2xl font-semibold tracking-normal leading-normal text-most-emphasize;
 }
 h4 {
    @apply text-xl font-semibold tracking-normal leading-normal;
 }
-
 h5 {
    @apply text-base font-light tracking-normal leading-normal;
 }
@@ -39,30 +40,36 @@ h6 {
    @apply text-sm font-light tracking-normal leading-snug;
 }
 
+/* paragraph */
 p,
 li {
-   @apply text-base leading-loose font-normal;
+   @apply text-base leading-relaxed font-normal text-higher-emphasize;
 }
+
+/* --- */
 
 /* Link preflight */
 a:hover {
    color: var(--medium-emphasize);
+   /* opacity: 0.75; */
    transition: color 0.2s ease-in-out;
-   /* background: var(--accent); */
-   /* background-size: 4px 100%; */
 }
-
-a {
-   @apply text-fg;
+a.decoration {
    background-image: linear-gradient(
-      var(--medium-emphasize),
-      var(--medium-emphasize)
+      var(--low-emphasize),
+      var(--low-emphasize)
    );
    background-size: 100% 1px;
    text-shadow: 0.1em 0 var(--bg), -0.1em 0 var(--bg);
    background-position: 0 bottom;
+   padding-bottom: 0.05em;
    background-repeat: no-repeat;
 }
+a {
+   @apply text-fg;
+}
+
+/* END OF PREFLIGHT */
 
 @tailwind components;
 @tailwind utilities;
@@ -80,7 +87,11 @@ img {
 }
 
 button:focus {
-   @apply .bg-shade .border-none .outline-none .text-fg;
+   @apply outline-none .text-fg;
+}
+
+button:hover {
+   @apply opacity-50 border-none .outline-none .text-fg;
 }
 
 blockquote {
@@ -90,22 +101,6 @@ blockquote {
 
 svg {
    @apply .stroke-fg;
-}
-
-h1,
-h2,
-h3 {
-   @apply text-most-emphasize;
-}
-
-p,
-li {
-   @apply text-higher-emphasize;
-}
-
-button:hover,
-button:focus {
-   @apply .bg-shade;
 }
 
 ::selection {
@@ -132,6 +127,7 @@ nav {
 footer {
    @apply .border-shade;
    & a {
+      text-shadow: none;
       background-image: none;
    }
 
@@ -139,4 +135,71 @@ footer {
       color: var(--fg);
       background: none;
    }
+}
+
+/* toastify custom */
+/** Used to define container behavior: width, position: fixed etc... **/
+.Toastify__toast-container {
+   @apply z-50 !important;
+}
+
+.Toastify__toast--default {
+   @apply bg-bg-header rounded border border-outline !important;
+   backdrop-filter: saturate(180%) blur(16px);
+}
+
+.Toastify__toast {
+   @apply min-h-0 h-auto shadow-md !important;
+}
+
+.Toastify__toast-body {
+   @apply m-0 p-2 text-most-emphasize text-sm !important;
+}
+
+.Toastify__progress-bar--default {
+   background: var(--fg) !important;
+}
+
+/* Menu container */
+/* Hide scrollbar for Chrome, Safari and Opera */
+#menu-container::-webkit-scrollbar {
+   display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+#menu-container {
+   -ms-overflow-style: none;
+}
+
+/* Add overlay to scrollable div */
+#menu-container {
+   -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+   );
+   -webkit-mask-image: -moz-linear-gradient(
+      to right,
+      transparent,
+      black 20px,
+      black 90%,
+      transparent
+   );
+   @screen md {
+      -webkit-mask-image: none;
+   }
+}
+
+/* kistune on scroll style */
+#kitsune {
+   position: absolute;
+   left: 0%;
+   top: 0%;
+}
+#kitsune.to-center {
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
 }

@@ -2,10 +2,10 @@ import dynamic from 'next/dynamic';
 import Date from '../../components/date';
 import Header from '../../components/header';
 import ReadTime from '../../components/read-time';
+import CodeIcon from '../../components/icons/code';
 import { getAllContentSlugs, getContentBySlug } from '../../lib/contents';
-import { useEffect } from 'react';
-import ButtonGlyph from '../../components/buttons/button-glyph';
-import AtIcon from '../../components/icons/at';
+import { useEffect, useRef } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Layout = dynamic(() => import('../../components/layout'));
 const Image = dynamic(() =>
@@ -25,20 +25,37 @@ export default function Post({
       return cover ? 'pt-8 md:pt-4 pb-16' : 'pt-16 md:pt-32 pb-16';
    };
 
-   const ButtonCopy = () => {
-      return (
-         <ButtonGlyph className='float-right'>
-            <AtIcon />
-         </ButtonGlyph>
+   const handleClick = async (e, data) => {
+      // get text value from <code></code>
+      const text = e.target.innerText;
+
+      // paste value to clipboard
+      await navigator.clipboard.writeText(text);
+
+      // show success toast
+      toast(
+         <div className='flex items-center justify-center'>
+            <CodeIcon className='stroke-success transform scale-75 mr-2' />{' '}
+            Copied to clipboard!
+         </div>,
+         {
+            position: toast.POSITION.BOTTOM_CENTER,
+            autoClose: 1500,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            role: 'success',
+         }
       );
    };
 
+   // useEffect() to add event listener to every pre element
    useEffect(() => {
-      const preElement = document.getElementsByTagName('pre');
-      for (var pre of preElement) {
-         console.log(pre);
+      let preElements = document.getElementsByTagName('pre');
+      for (let index = 0; index < preElements.length; index++) {
+         preElements.item(index).addEventListener('click', handleClick);
       }
-   });
+   }, []);
 
    return (
       <Layout>
@@ -51,6 +68,7 @@ export default function Post({
             {cover ? (
                <div className='justify-center my-12 md:-mx-16'>
                   <Image
+                     id='cover-content'
                      url={cover}
                      alt={coverAlt}
                      className='relative w-full rounded-sm object-cover mb-4 shadow-lg'
@@ -78,7 +96,6 @@ export default function Post({
 
 export async function getStaticPaths() {
    const paths = await getAllContentSlugs();
-
    return {
       paths,
       fallback: false,
