@@ -24,19 +24,19 @@ If you're designer especially focusing in User Interface Design or User Experien
 
 > 🔖here is some tips. I still see many felows run this plugin one-by-one selecting layer. You can select many rectangles/layers to fetch multiple image from unsplash.
 
-![unsplash fetch image](https://www.figma.com/community/plugin/738454987945972471/thumbnail)
+<!-- ![unsplash fetch image](https://www.figma.com/community/plugin/738454987945972471/thumbnail) -->
 
 ### [Color Palettes](https://www.figma.com/community/plugin/740832935938649295/Color-Palettes)
 
 **color** / **resources** –– Sometimes I want to try new color to put on my exploration design but I don't want to spend too much time searching on the web. Well, I really glad this plugin exists. Color Palettes plugin provides you many interesting color palettes to try. I know this color palettes sometimes not quiete good, If I have some spare time I would like to jump on [Adobe Color](https://color.adobe.com/create) instead. This is for quick design.
 
-![Color Palettes cover](https://www.figma.com/community/plugin/740832935938649295/thumbnail)
+<!-- ![Color Palettes cover](https://www.figma.com/community/plugin/740832935938649295/thumbnail) -->
 
 ### [Webgradients](https://www.figma.com/community/plugin/802147585857776440/Webgradients)
 
 **color** / **resources** –– Still talking about color, but this one is gradient color palettes. Webgradients plugin generate soft-pastelish gradient color. I really like their calming tones. Check it on Figma. Oh yes, they have web version, take a look here [webgradients website](http://webgradients.com/)
 
-![Webgradients cover](https://www.figma.com/community/plugin/802147585857776440/thumbnail)
+<!-- ![Webgradients cover](https://www.figma.com/community/plugin/802147585857776440/thumbnail) -->
 
 ### [Chroma Colors](https://www.figma.com/community/plugin/739237058450529919/Chroma-Colors)
 
@@ -44,49 +44,49 @@ If you're designer especially focusing in User Interface Design or User Experien
 
 > 🎯Another tips, befor you create style with Chroma Colors, better to rename it first with bulk rename to keep them in sections. Just like how you rename Components. ex: "Highlight / Magenta" and "Highlight / Cyan" will be grouped into "Highlight" section.
 
-![Chroma colors cover](https://www.figma.com/community/plugin/739237058450529919/thumbnail)
+<!-- ![Chroma colors cover](https://www.figma.com/community/plugin/739237058450529919/thumbnail) -->
 
 ### [Similayer](https://www.figma.com/community/plugin/735733267883397781/Similayer)
 
 **layer** / **utility** –– When working in Figma, layers often grew uncontrollable. And I usually forget where it does, or sometimes I wanna select many layers with same properties like name, or color, or text size. With this plugin, you just need to select what property you want to be filtered.
 
-![Similayer cover](https://www.figma.com/community/plugin/735733267883397781/thumbnail)
+<!-- ![Similayer cover](https://www.figma.com/community/plugin/735733267883397781/thumbnail) -->
 
 ### [SmoothShadow](https://www.figma.com/community/plugin/788830704169694737/SmoothShadow)
 
 **shadow** / **utility** –– Straight to the point, this plugin generate you multi layered shadow with flexible adjustment. You can add/reduce layer, change blur, offset, and opacity. The control quite unique, they use curve to control its value.
 
-![SmoothShadow](https://www.figma.com/community/plugin/788830704169694737/thumbnail)
+<!-- ![SmoothShadow](https://www.figma.com/community/plugin/788830704169694737/thumbnail) -->
 
 ### [Contrast](https://www.figma.com/community/plugin/748533339900865323/Contrast)
 
 **accessibility** / **utility** –– There's plenty plugin to check contrast in Figma, some of theme are Stark and Contrast. Many people choose Stark to check contrast ratio, but I personaly prefer using this plugin. Contrast automaticaly detect update layer focus. Their value change if your select another layer. While Stark, need to re run everytime you select new layer. 😬
 
-![Contrast cover](https://www.figma.com/community/plugin/748533339900865323/thumbnail)
+<!-- ![Contrast cover](https://www.figma.com/community/plugin/748533339900865323/thumbnail) -->
 
 ### [Swap Layer](https://www.figma.com/community/plugin/739493471028643540/Swap)
 
 **layer** / **utility** –– replacing one layer with another layer nested inside another layer is such pain. Imagine you have deep nested layer, rather than paste-then-delete, you can use this plugin. Select two layer you want to swap. And then run this Swap Layer plugin. Voila 😻
 
-![Swap Layer](https://www.figma.com/community/plugin/739493471028643540/thumbnail)
+<!-- ![Swap Layer](https://www.figma.com/community/plugin/739493471028643540/thumbnail) -->
 
 ### [Cofetti](https://www.figma.com/community/plugin/732876968584257019/Confetti)
 
 **layout** / **utitlity** –– don't want to spend designing doodly-decoration for your background? well you just need to define some shape, select them, and then run Cofetti. Boom, your background full of decoration🎰
 
-![Confetti cover](https://www.figma.com/community/plugin/732876968584257019/thumbnail)
+<!-- ![Confetti cover](https://www.figma.com/community/plugin/732876968584257019/thumbnail) -->
 
 ### [Blush](https://www.figma.com/community/plugin/838959511417581040/Blush)
 
 **illustration** / **resources** –– I CAN'T HELP WAITING FOR THIS PLUGIN RELEASED. Blush is a plugin to generate illustration with plenty customization like scene, color, hair, pose, etc!. But to use svg customization you need the premium plan 😣. Still their free plan is enough for mini project 🤤
 
-![Blush cover](https://www.figma.com/community/plugin/838959511417581040/thumbnail)
+<!-- ![Blush cover](https://www.figma.com/community/plugin/838959511417581040/thumbnail) -->
 
 ### [Super Tidy](https://www.figma.com/community/plugin/731260060173130163/Super-Tidy)
 
 **layout** / **utility** –– Figma builtin feature tidy up is great, but sometimes it doesn't work if layer position pretty messed. Yet, with this plugin you can easily tidy up you layer no matter how messed it is.
 
-![Super Tidy](https://www.figma.com/community/plugin/731260060173130163/thumbnail)
+<!-- ![Super Tidy](https://www.figma.com/community/plugin/731260060173130163/thumbnail) -->
 
 <br>
 
