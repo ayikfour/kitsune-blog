@@ -24,7 +24,7 @@ export default function WorkItem({
    return (
       <div className={getClassName()}>
          <p className='mb-1'>
-            <Link href={link} external={external}>
+            <Link href={link} external={external} className=''>
                {!home ? (
                   <Image
                      url={cover}

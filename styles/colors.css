@@ -18,7 +18,7 @@
    --bg: #111;
    --fg: #fafafa;
    --bg-header: rgba(17, 17, 17, 0.7);
-   --accent: var(--fg);
+   --accent: var(--success);
    --selection: hsla(0, 0%, 100%, 0.99);
 
    --shade: #333;
@@ -37,7 +37,7 @@
    --bg: #fafafa;
    --fg: #111;
    --bg-header: rgba(250, 250, 250, 0.8);
-   --accent: var(--fg);
+   --accent: var(--success);
    --selection: hsla(0, 0%, 0%, 0.99);
 
    --shade: #eaeaea;

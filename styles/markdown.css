@@ -14,24 +14,27 @@ user-select: all; */
 
 article {
    pre {
-      @apply border-outline cursor-pointer border .rounded  mb-8 p-3 pr-4;
+      @apply border-outline cursor-pointer border rounded  my-6 p-3 pr-4;
       overflow: auto;
    }
+   code {
+      @apply leading-tight !important;
+   }
+
    .code-alt {
-      @apply mb-8 -mt-6 text-xs text-low-emphasize text-center;
+      @apply mb-6 -mt-4 text-xs text-outline;
+      width: fit-content;
    }
    h2,
    h3 {
-      @apply mb-4 pt-4;
+      @apply mt-4 pt-4;
    }
    h4 {
-      @apply mb-4 pt-4;
+      @apply mt-4 pt-4;
    }
-   p {
-      @apply mb-4 break-words;
-   }
+   p,
    li {
-      @apply text-higher-emphasize;
+      @apply mt-4;
    }
    ul {
       @apply .list-inside .mb-4;

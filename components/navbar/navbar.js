@@ -13,7 +13,7 @@ const links = [
 const navbarStyle = `flex flex-row  mx-auto items-center top-0 justify-between`;
 
 export default function Navbar({ page }) {
-   const [prevScroll, setPrevScroll] = useState(0);
+   const [lastPos, setLastPos] = useState(0);
    const [isOnTop, setIsOnTop] = useState(true);
 
    const handleScroll = (e) => {
@@ -30,25 +30,25 @@ export default function Navbar({ page }) {
          setIsOnTop(true);
       }
 
-      if (prevScroll < currentY) {
+      if (lastPos < currentY) {
          menu.classList.add('opacity-0');
          kitsune.classList.add('to-center');
          navbar.classList.add('border-b', 'border-shade');
          setIsOnTop(false);
-      } else if (prevScroll > currentY + 25 || isOnTop) {
+      } else if (lastPos > currentY + 25 || isOnTop) {
          menu.classList.remove('opacity-0');
          kitsune.classList.remove('to-center');
          navbar.classList.remove('border-b', 'border-shade');
       }
 
-      setPrevScroll(window.scrollY);
+      setLastPos(currentY);
    };
 
    useEffect(() => {
-      setPrevScroll(window.scrollY);
+      setLastPos(window.scrollY);
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
-   }, []);
+   }, [lastPos]);
 
    return (
       <nav
@@ -56,22 +56,10 @@ export default function Navbar({ page }) {
          className='w-screen sticky top-0 mt-8 md:mt-16 py-2 z-50'
       >
          <div className={`${navbarStyle} ${containerStyle}`}>
-            <div className='flex flex-row relative  w-full justify-end flex-shrink-0 space-x-8'>
-               {/* <Link
-                  id='kitsune'
-                  className='self-center flex-shrink-0 py-2 md:items-center text-fg font-semibold'
-                  href='/'
-               > */}
-               <Link
-                  id='kitsune'
-                  className='flex-shrink-0 py-2 md:items-center text-fg font-semibold transition-all duration-300 ease-in-out'
-                  href='/'
-               >
-                  キツネ
-               </Link>
+            <div className='flex flex-row relative  w-full justify-end flex-shrink-0 '>
                <div
                   id='menu-container'
-                  className='flex items-center whitespace-no-wrap overflow-x-scroll transform transition-all duration-300 ease-in-out'
+                  className='w-2/3 flex items-center whitespace-no-wrap justify-end overflow-x-scroll transform transition-all duration-300 ease-in-out'
                >
                   {links.map(({ name, href }) => (
                      <Link key={name} href={href} className='text-fg px-2'>
@@ -80,6 +68,13 @@ export default function Navbar({ page }) {
                   ))}
                   <ButtonToggle />
                </div>
+               <Link
+                  id='kitsune'
+                  className='flex-shrink-0 py-2 leading-relaxed items-center text-fg font-semibold transition-all duration-300 ease-in-out'
+                  href='/'
+               >
+                  キツネ
+               </Link>
             </div>
          </div>
       </nav>

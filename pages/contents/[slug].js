@@ -4,7 +4,7 @@ import Header from '../../components/header';
 import ReadTime from '../../components/read-time';
 import CodeIcon from '../../components/icons/code';
 import { getAllContentSlugs, getContentBySlug } from '../../lib/contents';
-import { useEffect, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 
 const Layout = dynamic(() => import('../../components/layout'));
@@ -27,35 +27,50 @@ export default function Post({
 
    const handleClick = async (e, data) => {
       // get text value from <code></code>
-      const text = e.target.innerText;
+      try {
+         const text = e.target.innerText;
+         console.log('copied');
 
-      // paste value to clipboard
-      await navigator.clipboard.writeText(text);
+         // paste value to clipboard
+         await navigator.clipboard.writeText(text);
 
-      // show success toast
-      toast(
-         <div className='flex items-center justify-center'>
-            <CodeIcon className='stroke-success transform scale-75 mr-2' />{' '}
-            Copied to clipboard!
-         </div>,
-         {
-            position: toast.POSITION.BOTTOM_CENTER,
-            autoClose: 1500,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: true,
-            role: 'success',
-         }
-      );
+         // show success toast
+         toast(
+            <div className='flex items-center justify-center'>
+               <CodeIcon className='stroke-success transform scale-75 mr-2' />{' '}
+               Copied to clipboard!
+            </div>,
+            {
+               position: toast.POSITION.BOTTOM_CENTER,
+               autoClose: 1500,
+               hideProgressBar: true,
+               closeOnClick: true,
+               pauseOnHover: true,
+               role: 'success',
+            }
+         );
+      } catch (error) {
+         console.log('TOATS', error);
+      }
    };
 
-   // useEffect() to add event listener to every pre element
+   const [rerender, setRerender] = useState(false); // or any state
+
    useEffect(() => {
       let preElements = document.getElementsByTagName('pre');
+
+      if (preElements.length == 0) {
+         console.log('rerender!');
+         setRerender(!rerender);
+         return;
+      }
+
       for (let index = 0; index < preElements.length; index++) {
          preElements.item(index).addEventListener('click', handleClick);
       }
-   }, []);
+
+      setRerender(false);
+   }, [rerender]);
 
    return (
       <Layout>

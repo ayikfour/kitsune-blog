@@ -3,6 +3,7 @@ import Link from './link';
 import Navbar from './navbar/navbar';
 import Header from './header';
 import Footer from './layouts/footer';
+import { ToastContainer } from 'react-toastify';
 
 const name = 'Ayik Four';
 export const siteTitle = 'Ayik Four';
@@ -23,6 +24,7 @@ export default function Layout({ children, home }) {
             )}
          </main>
          <Footer />
+         <ToastContainer closeButton={false} limit={1} />
       </div>
    );
 }

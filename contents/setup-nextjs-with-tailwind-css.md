@@ -19,9 +19,7 @@ Then I decided to pick Next.Js. First reasone why I choose Next is because their
 
 Here is step-by-step for configuring [Next.js](https:/nextjs.org/) project with [Tailwind CSS](https://tailwindcss.com/) for styling.
 
-### Setup Next.js
-
-#### Manual
+#### Setup Next.js manual
 
 if you want plain and manual setup Next.js follow this. first, create a directory for your project, then change directory to `nextjs-blog`:
 
@@ -29,23 +27,17 @@ if you want plain and manual setup Next.js follow this. first, create a director
 mkdir nextjs-blog && cd nextjs-blog
 ```
 
-<p class="code-alt">create nextjs directory</p>
-
 and init npm. `-y` argument is to proceed with agree all command prompts question:
 
 ```bash
 npm init -y
 ```
 
-<p class="code-alt">init npm project</p>
-
 then, install Next.js and React dependencies:
 
 ```bash
 npm install --save next react react-dom
 ```
-
-<p class="code-alt">install react, next</p>
 
 after installing dependecies change your `package.json` file:
 
@@ -78,7 +70,7 @@ function Home() {
 export default Home;
 ```
 
-#### Starter template
+#### Setup Next.js manual starter template
 
 Or if you want to use [starter template](https://nextjs.org/learn/basics/create-nextjs-app) just run this command to create new directory with Next.js installed:
 
@@ -92,7 +84,7 @@ and then change directory to `nextjs-blog`:
 cd nextjs-blog
 ```
 
-#### Run
+#### Run the program
 
 test running the program (I used the manual setup) by running this command:
 
@@ -227,7 +219,7 @@ And if you do correctly, you [app](http://localhost:3000) would look like this
 
 ![Background changed to purple](https://i.imgur.com/kH2DGCG.png)
 
-> **_If your index page don't change_**, try to restart the server.
+> 🔫If your index page don't change, try to restart the server.
 
 ### That's all, Happy styling! 🥳
 

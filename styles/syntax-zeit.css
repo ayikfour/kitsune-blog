@@ -22,7 +22,7 @@ code[class*='language-'] {
    white-space: pre;
    word-spacing: normal;
    word-break: normal;
-   line-height: 1 !important;
+   /* line-height: 1 !important; */
    -moz-tab-size: 4;
    -o-tab-size: 4;
    tab-size: 4;

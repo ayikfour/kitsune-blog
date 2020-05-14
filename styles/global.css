@@ -16,6 +16,7 @@ html {
    /* font-family: 'Inter', sans-serif; */
    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
       sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; */
+   line-height: unset;
 }
 
 /* typography preflight */
@@ -43,7 +44,7 @@ h6 {
 /* paragraph */
 p,
 li {
-   @apply text-base leading-relaxed font-normal text-higher-emphasize;
+   @apply text-base leading-relaxed font-normal tracking-normal text-higher-emphasize;
 }
 
 /* --- */
@@ -66,7 +67,7 @@ a.decoration {
    background-repeat: no-repeat;
 }
 a {
-   @apply text-fg;
+   @apply text-accent;
 }
 
 /* END OF PREFLIGHT */

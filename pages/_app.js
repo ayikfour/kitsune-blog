@@ -5,7 +5,6 @@ import debounce from 'lodash.debounce';
 import nprogress from 'nprogress';
 import Router from 'next/router';
 import { useHotkeys } from 'react-hotkeys-hook';
-import { ToastContainer } from 'react-toastify';
 
 const start = debounce(nprogress.start, 500);
 Router.events.on('routeChangeStart', start);
@@ -30,7 +29,6 @@ export default function App({ Component, pageProps }) {
    return (
       <div>
          <Component {...pageProps} />
-         <ToastContainer closeButton={false} limit={1} />
       </div>
    );
 }
