@@ -27,6 +27,7 @@ export default function Navbar({ page }) {
       const kitsune = document.getElementById('kitsune');
 
       if (currentY < 50) {
+         console.log(isOnTop, currentY);
          setIsOnTop(true);
       }
 
@@ -38,6 +39,7 @@ export default function Navbar({ page }) {
       } else if (lastPos > currentY + 25 || isOnTop) {
          menu.classList.remove('opacity-0');
          kitsune.classList.remove('to-center');
+      } else if (isOnTop) {
          navbar.classList.remove('border-b', 'border-shade');
       }
 
@@ -56,10 +58,13 @@ export default function Navbar({ page }) {
          className='w-screen sticky top-0 mt-8 md:mt-16 py-2 z-50'
       >
          <div className={`${navbarStyle} ${containerStyle}`}>
-            <div className='flex flex-row relative  w-full justify-end flex-shrink-0 '>
+            <div className='flex flex-row relative w-full justify-between flex-shrink-0 '>
+               <Link id='kitsune' className='' href='/'>
+                  キツネ.
+               </Link>
                <div
                   id='menu-container'
-                  className='w-2/3 flex items-center whitespace-no-wrap justify-end overflow-x-scroll transform transition-all duration-300 ease-in-out'
+                  className='flex ml-12 items-center whitespace-no-wrap overflow-x-scroll transition-all duration-300 ease-in-out'
                >
                   {links.map(({ name, href }) => (
                      <Link key={name} href={href} className='text-fg px-2'>
@@ -68,13 +73,6 @@ export default function Navbar({ page }) {
                   ))}
                   <ButtonToggle />
                </div>
-               <Link
-                  id='kitsune'
-                  className='flex-shrink-0 py-2 leading-relaxed items-center text-fg font-semibold transition-all duration-300 ease-in-out'
-                  href='/'
-               >
-                  キツネ
-               </Link>
             </div>
          </div>
       </nav>

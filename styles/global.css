@@ -195,12 +195,8 @@ footer {
 
 /* kistune on scroll style */
 #kitsune {
-   position: absolute;
-   left: 0%;
-   top: 0%;
+   @apply flex-shrink-0 py-2 leading-relaxed text-fg font-semibold items-center transition-all transform scale-125 translate-x-4 duration-300 ease-in-out;
 }
 #kitsune.to-center {
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);
+   @apply ease-in-out transform translate-y-1 transition-all duration-300;
 }
