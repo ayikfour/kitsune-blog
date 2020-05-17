@@ -1,7 +1,7 @@
 ---
 title: 'Awesome Figma Plugin'
 date: '2020-05-07'
-description: 'My personal workflow to manage project in Figma'
+description: 'My personal list of an awesome Figma Plugins'
 cover: 'https://res.cloudinary.com/ayikfour/image/upload/v1589754085/Figma_awesome_lcbsjx.png'
 coverAlt: 'photo by SCAVENGEDLUXURY in tumblr.'
 ---

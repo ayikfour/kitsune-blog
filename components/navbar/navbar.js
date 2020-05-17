@@ -63,12 +63,12 @@ export default function Navbar({ page }) {
                   id='menu-container'
                   className='flex ml-12 items-center whitespace-no-wrap overflow-x-scroll transition-all duration-300 ease-in-out'
                >
+                  <ButtonToggle />
                   {links.map(({ name, href }) => (
                      <Link key={name} href={href} className='text-fg px-2'>
                         {name}
                      </Link>
                   ))}
-                  <ButtonToggle />
                </div>
             </div>
          </div>

@@ -35,7 +35,7 @@ export default function WorkItem({
                {title}
             </Link>
          </p>
-         <p className='mb-1 leading-normal'>{description}</p>
+         {/* <p className='mb-1 leading-normal'>{description}</p> */}
          <Date dateString={date} />
       </div>
    );

@@ -1,7 +1,7 @@
 ---
 title: 'Setup Next.Js with Tailwind CSS'
 date: '2020-05-07'
-description: 'My personal workflow to manage project in Figma'
+description: 'How to setup Next.js with Tailwind CSS'
 cover: 'https://res.cloudinary.com/ayikfour/image/upload/v1589754087/Next.js_tailwind_mau4rn.png'
 coverAlt: 'Photo by Lakagigar in Flickr'
 ---
@@ -136,11 +136,7 @@ Now, let's init our Tailwind CSS. Create new file named `global.css` inside `/st
 /* some style */
 ```
 
-What's that? it's css syntax to init Tailwind CSS style into our program. You need to initiate it in the very top of the css file. And then your styling can goes below.
-
-for further reference reading take a look at [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation/)
-
-at this point your project root directory should look like this:
+What's that? it's css syntax to init Tailwind CSS style into our program. You need to initiate it in the very top of the css file. And then your styling can goes below. for further reference reading take a look at [Tailwind CSS Documentation](https://tailwindcss.com/docs/installation/). at this point your project root directory should look like this:
 
 ```markdown
 .
