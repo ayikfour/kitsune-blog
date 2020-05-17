@@ -19,25 +19,22 @@ export default function Navbar({ page }) {
    const handleScroll = (e) => {
       const window = e.currentTarget;
       const currentY = window.scrollY;
-      const thresholdDown = 150;
-      const thresholdUp = 75;
 
       const menu = document.getElementById('menu-container');
       const navbar = document.getElementById('navbar');
       const kitsune = document.getElementById('kitsune');
 
-      if (currentY < 50) {
-         console.log(isOnTop, currentY);
+      if (currentY < 64) {
          setIsOnTop(true);
       }
 
-      if (lastPos < currentY) {
-         menu.classList.add('opacity-0');
+      if (lastPos < currentY && currentY > 64) {
+         menu.classList.add('hidden');
          kitsune.classList.add('to-center');
          navbar.classList.add('border-b', 'border-shade');
          setIsOnTop(false);
       } else if (lastPos > currentY + 25 || isOnTop) {
-         menu.classList.remove('opacity-0');
+         menu.classList.remove('hidden');
          kitsune.classList.remove('to-center');
       } else if (isOnTop) {
          navbar.classList.remove('border-b', 'border-shade');

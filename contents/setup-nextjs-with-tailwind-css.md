@@ -2,7 +2,7 @@
 title: 'Setup Next.Js with Tailwind CSS'
 date: '2020-05-07'
 description: 'My personal workflow to manage project in Figma'
-cover: 'https://i.imgur.com/0UEM2yO.png'
+cover: 'https://res.cloudinary.com/ayikfour/image/upload/v1589754087/Next.js_tailwind_mau4rn.png'
 coverAlt: 'Photo by Lakagigar in Flickr'
 ---
 
