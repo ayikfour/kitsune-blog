@@ -50,3 +50,14 @@ const Kuesioner = () => {
 };
 
 export default Kuesioner;
+
+Kuesioner.getInitialProps = ({ res }) => {
+   if (res) {
+      res.writeHead(301, {
+         Location: LINK_KUESIONER,
+      });
+      res.end();
+   }
+
+   return {};
+};
