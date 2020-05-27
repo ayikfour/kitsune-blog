@@ -27,7 +27,7 @@ const Kuesioner = () => {
          <Header
             title='Bantuan Ayik untuk segera sarjana'
             description='Kami, Ayik dan Igar sedang melakukan user research untuk penelitian skripsi kami. Kami membutuhkan dukungan teman-teman untuk mengisi kuesioner kami sebagai responden 🙏🏻'
-            og='/public/images/og/og-kuesioner.png'
+            og='https://ayikfour.now.sh/images/og/og-kuesioner.png'
          />
          <Section name='Redirecting'>
             <p>
