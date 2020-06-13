@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 
 const LINK_KUESIONER =
-   'https://docs.google.com/forms/d/e/1FAIpQLSc2LhyXAfaduStR_jiku_TW5jl8EEuTHjknlXQFuQ32Guue6Q/viewform';
+   'https://docs.google.com/forms/d/e/1FAIpQLSdsAQa2VTV55ittYeMTYhfsLoiJfkOJA2jB6d6VZ14LGC5WJw/viewform';
 const title = 'Customer research';
 const description =
    'Kami Artms, sedang melakukan riset pelanggan tentang perilaku dan preferensi dalam menggunakan layanan cuci sepatu';
@@ -46,13 +46,13 @@ const Artms = () => {
 
 export default Artms;
 
-// Kuesioner.getInitialProps = ({ res }) => {
-//    if (res) {
-//       res.writeHead(301, {
-//          Location: LINK_KUESIONER,
-//       });
-//       res.end();
-//    }
+Artms.getInitialProps = ({ res }) => {
+   if (res) {
+      res.writeHead(301, {
+         Location: LINK_KUESIONER,
+      });
+      res.end();
+   }
 
-//    return {};
-// };
+   return {};
+};
