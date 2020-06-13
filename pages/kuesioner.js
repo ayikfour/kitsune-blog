@@ -9,19 +9,6 @@ const LINK_KUESIONER =
    'https://docs.google.com/forms/d/e/1FAIpQLSc2LhyXAfaduStR_jiku_TW5jl8EEuTHjknlXQFuQ32Guue6Q/viewform';
 
 const Kuesioner = () => {
-   const router = useRouter();
-
-   const handleLoad = () => {
-      //  redirect after 1s to google form
-      setTimeout(() => {
-         window.location.href = LINK_KUESIONER;
-      }, 1000);
-   };
-
-   useEffect(() => {
-      window.addEventListener('load', handleLoad);
-   });
-
    return (
       <Layout>
          <Header
